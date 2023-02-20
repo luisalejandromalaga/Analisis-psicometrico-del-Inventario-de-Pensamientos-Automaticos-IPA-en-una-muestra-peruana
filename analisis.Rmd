@@ -1,0 +1,304 @@
+---
+title: Análisis psicométrico del Inventario de Pensamientos Automáticos (IPA) en una
+  muestra peruana
+output:
+  html_document: default
+  pdf_document: default
+author:
+  - Luis Málaga, Alappont S.A.C.
+  - Aaron Held, Alappont S.A.C.
+---
+
+# Cargar la paquetería
+
+Primero se instalan los paquetes, usando la función "ipak".
+
+```{r}
+##
+#CORREGIR TODOS LOS ERRORES EN EL COMPILADO
+#23-09-22
+##
+#ipak
+ipak <- function(pkg){
+  new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+  if (length(new.pkg)) 
+    install.packages(new.pkg, dependencies = TRUE)
+  sapply(pkg, require, character.only = TRUE)
+}
+
+##usage
+packages <- c(
+  "readxl",
+  "openxlsx",
+  "writexl",
+  "moments",
+  "ggplot2",
+  "knitr",
+  "ltm",
+  "psych",
+  "mirt",
+  "mvtnorm",
+  "msm",
+  "fitdistrplus",
+  "MVN",
+  "lavaan",
+  "DiagrammeR",
+  "dplyr",
+  "semPlot",
+  "psych",
+  "corrplot",
+  "parameters",
+  "apa",
+  "haven",
+  "ggplot2",
+  "ggpubr",
+  "gridExtra",
+  "apaTables",
+  "reshape",
+  "GPArotation",
+  "mvtnorm",
+  "nFactors",
+  "semPlot", 
+  "MVN",
+  "semTools",
+  "tidySEM",
+  "stringr",
+  "DiagrammeR"
+  )
+ipak(packages)
+
+
+
+```
+
+# Cargar la base de datos
+
+```{r}
+data <- read_excel("data_494.xlsx")
+```
+
+# Estadística descriptiva
+Se importan los items sólamente
+```{r}
+items <- data[, 3:47]
+```
+Se calcula, la media, la desviación estanar, la asimetría y la curtosos. Además de la prueba de mardia de normalidad multivariada.
+```{r}
+##TRATAR DE UNIFICAR LA TABLA DE DESCRIPTIVOS DE LOS ITEMS
+#Se sugiere poder hacer que los datos de los items elegidos, separados del total, esto en el caso de que coincidan estos datos y se ajusten a una normal.
+
+i1 <- data['i1']
+i1 <- as.numeric(unlist(i1))
+mean<-sapply(items, FUN=mean)
+r <- (mean)
+mean <- data.frame(mean)
+sd<-sapply(items, FUN=sd)
+skewness<-skewness(items)
+kurtosis<-kurtosis(items)
+
+kable(list(mean, sd, skewness, kurtosis))
+i1_tabla <- as.data.frame(prop.table(table(i1))*100)
+
+
+descdist(i1, boot = 1000)
+ggplot(i1_tabla, aes(x=i1, y=Freq)) + geom_bar(stat = "identity")
+
+s <- mvn(items, mvnTest = "mardia")
+print(s$multivariateNormality)
+```
+# Análisis factorial
+## Análisis factorial exploratorio
+
+Las correlaciones polícóricas 
+
+```{r}
+#Se corre las correlaciones policóricas, recomenda
+correl <- polychoric(items)
+
+#Indice KMO
+KMO(correl$rho)
+
+#fa.parallel(items, cor = "poly")
+#Parallel analysis suggests that the number of factors =  5  and the number of components =  2   
+
+#El análisis paralelo sugiere 5 items, pero en el procedimiento de interesección se han obtenido 3, por lo que debe probarse.
+
+
+exploratorio <- factanal(items, factors = 3, rotation="varimax")
+
+print(exploratorio)
+
+ASIfactor<-fa(items,nfactors = 5,fm = "ml",rotate ="varimax",cor = "poly")
+
+
+print(ASIfactor,digits = 2,cut = .40,sort=TRUE)
+
+
+# write_xlsx(w,"cargas_factoriales.xlsx")
+
+
+corrplot(cor(items, use="complete.obs"), order = "original", tl.col='black', tl.cex=.75) 
+corrplot(cor(items, use="complete.obs"), order = "hclust", tl.col='black', tl.cex=.75) 
+
+
+
+
+```
+
+
+```{r}
+IRTModel <- mirt(items, model = 1, itemtype = "gpcm")
+
+summary(IRTModel)
+```
+
+Un buen item esta ordenado
+
+```{r}
+
+coef(IRTModel , IRTpars = T)
+
+itemplot(IRTModel, 3, type = "trace")
+itemplot(IRTModel, 3, type = "info")
+
+coef(IRTModel , IRTpars = T)
+plot(IRTModel,  type = "trace")
+plot(IRTModel,  type = "info")
+
+
+
+itemplot(IRTModel,1, type = 'trace')
+itemplot(IRTModel,2, type = 'trace')
+itemplot(IRTModel,3, type = 'trace')
+itemplot(IRTModel,4, type = 'trace')
+itemplot(IRTModel,5, type = 'trace')
+itemplot(IRTModel,6, type = 'trace')
+itemplot(IRTModel,7, type = 'trace')
+itemplot(IRTModel,8, type = 'trace')
+itemplot(IRTModel,9, type = 'trace')
+itemplot(IRTModel,10, type = 'trace')
+itemplot(IRTModel,11, type = 'trace')
+itemplot(IRTModel,12, type = 'trace')
+itemplot(IRTModel,13, type = 'trace')
+itemplot(IRTModel,14, type = 'trace')
+itemplot(IRTModel,15, type = 'trace')
+itemplot(IRTModel,16, type = 'trace')
+itemplot(IRTModel,17, type = 'trace')
+itemplot(IRTModel,18, type = 'trace')
+itemplot(IRTModel,19, type = 'trace')
+itemplot(IRTModel,20, type = 'trace')
+itemplot(IRTModel,21, type = 'trace')
+itemplot(IRTModel,22, type = 'trace')
+itemplot(IRTModel,23, type = 'trace')
+itemplot(IRTModel,24, type = 'trace')
+itemplot(IRTModel,25, type = 'trace')
+itemplot(IRTModel,26, type = 'trace')
+itemplot(IRTModel,27, type = 'trace')
+itemplot(IRTModel,28, type = 'trace')
+itemplot(IRTModel,29, type = 'trace')
+itemplot(IRTModel,30, type = 'trace')
+itemplot(IRTModel,31, type = 'trace')
+itemplot(IRTModel,32, type = 'trace')
+itemplot(IRTModel,33, type = 'trace')
+itemplot(IRTModel,34, type = 'trace')
+itemplot(IRTModel,35, type = 'trace')
+itemplot(IRTModel,36, type = 'trace')
+itemplot(IRTModel,37, type = 'trace')
+itemplot(IRTModel,38, type = 'trace')
+itemplot(IRTModel,39, type = 'trace')
+itemplot(IRTModel,40, type = 'trace')
+itemplot(IRTModel,41, type = 'trace')
+itemplot(IRTModel,42, type = 'trace')
+itemplot(IRTModel,43, type = 'trace')
+itemplot(IRTModel,44, type = 'trace')
+itemplot(IRTModel,45, type = 'trace')
+
+```
+```{r}
+x1 <-c(38, 43, 16, 23, 18, 14, 25, 29, 31, 35, 24, 27, 13, 12)#UCV
+x2 <-c(38, 7, 23, 8, 14, 43, 25)#DATA
+
+x3 <- c(11, 32, 17, 6, 3, 9, 36, 12, 18, 22, 42, 24, 33, 2, 20, 4, 41, 1, 31, 16, 10, 19, 28, 13) #DATA
+x4 <-c(32, 17, 2, 36, 33, 11, 20, 3, 1, 28)#UCV
+x5 <- c(11, 3, 6, 9, 33, 16, 1, 36, 12, 24)#UPC
+
+x6 <- c(30, 45, 15, 13, 2, 22)#UPC
+x7 <- c(30, 45, 15, 35, 40)#DATA
+x8 <- c(30, 45, 15)#UCV
+
+f1 <- intersect(x1, x2) 
+print(f1)
+f2 <- Reduce(intersect, list(x3, x4, x5)) 
+print(f2)
+
+f3 <- Reduce(intersect, list(x6, x7, x8)) 
+print(f3)
+
+
+modelo_afc<- "
+f1  =~ i38+i43+i23+i14+i25
+f2  =~ i11+i3+i36+i33+i1
+f3  =~ i30+i45+i15
+"
+#Acemos el análisis factorial conformatorio
+
+afc2<-cfa(modelo_afc, estimator = 'WLSMV', data = items)
+
+#Pedimos los resultados
+summary(afc2, fit.measures = T, standardized = T)
+
+library("effectsize")
+
+#interpret(afc2)
+
+reliability(afc2)
+
+#PLOT
+semPaths(afc2,  "std",   edge.label.bg=TRUE, sizeMan = 3, sizeInt = 1)
+```
+
+Aplicación de teoría de respuesta al item
+
+```{r}
+f1_data <- items[,c('i38', 'i43', 'i23', 'i14', 'i25')]
+f2_data <- items[,c('i11',  'i3', 'i36', 'i33',  'i1')]
+f3_data <- items[,c('i30', 'i45', 'i15')]
+
+
+f1_modelo <- mirt(f1_data, model = 1, itemtype = "gpcm")
+summary(f1_modelo)
+
+f2_modelo <- mirt(f2_data, model = 1, itemtype = "gpcm")
+summary(f2_modelo)
+
+f3_modelo <- mirt(f3_data, model = 1, itemtype = "gpcm")
+summary(f3_modelo)
+
+coef(f1_modelo , IRTpars = T)
+plot(f1_modelo,  type = "trace")
+plot(f1_modelo,  type = "info")
+
+itemplot(f1_modelo,1, type = 'trace')
+itemplot(f1_modelo,2, type = 'trace')
+itemplot(f1_modelo,3, type = 'trace')
+itemplot(f1_modelo,4, type = 'trace')
+itemplot(f1_modelo,5, type = 'trace')
+
+
+coef(f2_modelo , IRTpars = T)
+plot(f2_modelo,  type = "trace")
+plot(f2_modelo,  type = "info")
+
+itemplot(f2_modelo,1, type = 'trace')
+itemplot(f2_modelo,2, type = 'trace')
+itemplot(f2_modelo,3, type = 'trace')
+itemplot(f2_modelo,4, type = 'trace')
+itemplot(f2_modelo,5, type = 'trace')
+
+coef(f3_modelo , IRTpars = T)
+plot(f3_modelo,  type = "trace")
+plot(f3_modelo,  type = "info")
+itemplot(f3_modelo,1, type = 'trace')
+itemplot(f3_modelo,2, type = 'trace')
+itemplot(f3_modelo,3, type = 'trace')
+```

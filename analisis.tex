@@ -1,0 +1,2506 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Análisis psicométrico del Inventario de Pensamientos Automáticos (IPA) en una muestra peruana},
+  pdfauthor={Luis Málaga, Alappont; Aaron Held, Alappont},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Análisis psicométrico del Inventario de Pensamientos Automáticos
+(IPA) en una muestra peruana}
+\author{Luis Málaga, Alappont \and Aaron Held, Alappont}
+\date{}
+
+\begin{document}
+\maketitle
+
+\#Cargar la paquetería
+
+Primero se instalan los paquetes, usando la función ``ipak''.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#}
+\CommentTok{\#CORREGIR TODOS LOS ERRORES EN EL COMPILADO}
+\CommentTok{\#23{-}09{-}22}
+\DocumentationTok{\#\#}
+\CommentTok{\#ipak}
+\NormalTok{ipak }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(pkg)\{}
+\NormalTok{  new.pkg }\OtherTok{\textless{}{-}}\NormalTok{ pkg[}\SpecialCharTok{!}\NormalTok{(pkg }\SpecialCharTok{\%in\%} \FunctionTok{installed.packages}\NormalTok{()[, }\StringTok{"Package"}\NormalTok{])]}
+  \ControlFlowTok{if}\NormalTok{ (}\FunctionTok{length}\NormalTok{(new.pkg)) }
+    \FunctionTok{install.packages}\NormalTok{(new.pkg, }\AttributeTok{dependencies =} \ConstantTok{TRUE}\NormalTok{)}
+  \FunctionTok{sapply}\NormalTok{(pkg, require, }\AttributeTok{character.only =} \ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{\}}
+
+\DocumentationTok{\#\#usage}
+\NormalTok{packages }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}
+  \StringTok{"readxl"}\NormalTok{,}
+  \StringTok{"openxlsx"}\NormalTok{,}
+  \StringTok{"writexl"}\NormalTok{,}
+  \StringTok{"moments"}\NormalTok{,}
+  \StringTok{"ggplot2"}\NormalTok{,}
+  \StringTok{"knitr"}\NormalTok{,}
+  \StringTok{"ltm"}\NormalTok{,}
+  \StringTok{"psych"}\NormalTok{,}
+  \StringTok{"mirt"}\NormalTok{,}
+  \StringTok{"mvtnorm"}\NormalTok{,}
+  \StringTok{"msm"}\NormalTok{,}
+  \StringTok{"fitdistrplus"}\NormalTok{,}
+  \StringTok{"MVN"}\NormalTok{,}
+  \StringTok{"lavaan"}\NormalTok{,}
+  \StringTok{"DiagrammeR"}\NormalTok{,}
+  \StringTok{"dplyr"}\NormalTok{,}
+  \StringTok{"semPlot"}\NormalTok{,}
+  \StringTok{"psych"}\NormalTok{,}
+  \StringTok{"corrplot"}\NormalTok{,}
+  \StringTok{"parameters"}\NormalTok{,}
+  \StringTok{"apa"}\NormalTok{,}
+  \StringTok{"haven"}\NormalTok{,}
+  \StringTok{"ggplot2"}\NormalTok{,}
+  \StringTok{"ggpubr"}\NormalTok{,}
+  \StringTok{"gridExtra"}\NormalTok{,}
+  \StringTok{"apaTables"}\NormalTok{,}
+  \StringTok{"reshape"}\NormalTok{,}
+  \StringTok{"GPArotation"}\NormalTok{,}
+  \StringTok{"mvtnorm"}\NormalTok{,}
+  \StringTok{"nFactors"}\NormalTok{,}
+  \StringTok{"semPlot"}\NormalTok{, }
+  \StringTok{"MVN"}\NormalTok{,}
+  \StringTok{"semTools"}\NormalTok{,}
+  \StringTok{"tidySEM"}\NormalTok{,}
+  \StringTok{"stringr"}\NormalTok{,}
+  \StringTok{"DiagrammeR"}
+\NormalTok{  )}
+\FunctionTok{ipak}\NormalTok{(packages)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required package: readxl
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: openxlsx
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: writexl
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: moments
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: ggplot2
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: knitr
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: ltm
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: MASS
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: msm
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: polycor
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: psych
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'psych'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:ltm':
+## 
+##     factor.scores
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:polycor':
+## 
+##     polyserial
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:ggplot2':
+## 
+##     %+%, alpha
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: mirt
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: stats4
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: lattice
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'mirt'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:ltm':
+## 
+##     Science
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: mvtnorm
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: fitdistrplus
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: survival
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: MVN
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: lavaan
+\end{verbatim}
+
+\begin{verbatim}
+## This is lavaan 0.6-12
+## lavaan is FREE software! Please report any bugs.
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'lavaan'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:psych':
+## 
+##     cor2cov
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: DiagrammeR
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: dplyr
+\end{verbatim}
+
+\begin{verbatim}
+## Error: package or namespace load failed for 'dplyr' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+##  namespace 'vctrs' 0.3.8 is already loaded, but >= 0.4.1 is required
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: semPlot
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: corrplot
+\end{verbatim}
+
+\begin{verbatim}
+## corrplot 0.92 loaded
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: parameters
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'parameters'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:moments':
+## 
+##     kurtosis, skewness
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: apa
+\end{verbatim}
+
+\begin{verbatim}
+## Error: package or namespace load failed for 'apa' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+##  namespace 'vctrs' 0.3.8 is already loaded, but >= 0.4.1 is required
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: haven
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: ggpubr
+\end{verbatim}
+
+\begin{verbatim}
+## Error: package or namespace load failed for 'ggpubr' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+##  namespace 'vctrs' 0.3.8 is already loaded, but >= 0.4.1 is required
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: gridExtra
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: apaTables
+\end{verbatim}
+
+\begin{verbatim}
+## Error: package or namespace load failed for 'apaTables' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+##  namespace 'vctrs' 0.3.8 is already loaded, but >= 0.4.1 is required
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: reshape
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: GPArotation
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: nFactors
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'nFactors'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:lattice':
+## 
+##     parallel
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: semTools
+\end{verbatim}
+
+\begin{verbatim}
+## 
+\end{verbatim}
+
+\begin{verbatim}
+## ###############################################################################
+\end{verbatim}
+
+\begin{verbatim}
+## This is semTools 0.5-6
+\end{verbatim}
+
+\begin{verbatim}
+## All users of R (or SEM) are invited to submit functions or ideas for functions.
+\end{verbatim}
+
+\begin{verbatim}
+## ###############################################################################
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'semTools'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:parameters':
+## 
+##     kurtosis
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:psych':
+## 
+##     reliability, skew
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:moments':
+## 
+##     kurtosis
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: tidySEM
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: OpenMx
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'OpenMx'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:psych':
+## 
+##     tr
+\end{verbatim}
+
+\begin{verbatim}
+## Error: package or namespace load failed for 'tidySEM' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+##  namespace 'vctrs' 0.3.8 is already loaded, but >= 0.4.1 is required
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: stringr
+\end{verbatim}
+
+\begin{verbatim}
+##       readxl     openxlsx      writexl      moments      ggplot2        knitr 
+##         TRUE         TRUE         TRUE         TRUE         TRUE         TRUE 
+##          ltm        psych         mirt      mvtnorm          msm fitdistrplus 
+##         TRUE         TRUE         TRUE         TRUE         TRUE         TRUE 
+##          MVN       lavaan   DiagrammeR        dplyr      semPlot        psych 
+##         TRUE         TRUE         TRUE        FALSE         TRUE         TRUE 
+##     corrplot   parameters          apa        haven      ggplot2       ggpubr 
+##         TRUE         TRUE        FALSE         TRUE         TRUE        FALSE 
+##    gridExtra    apaTables      reshape  GPArotation      mvtnorm     nFactors 
+##         TRUE        FALSE         TRUE         TRUE         TRUE         TRUE 
+##      semPlot          MVN     semTools      tidySEM      stringr   DiagrammeR 
+##         TRUE         TRUE         TRUE        FALSE         TRUE         TRUE
+\end{verbatim}
+
+\#Cargar la base de datos
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{read\_excel}\NormalTok{(}\StringTok{"data\_494.xlsx"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\#Estadística descriptiva
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{items }\OtherTok{\textless{}{-}}\NormalTok{ data[, }\DecValTok{3}\SpecialCharTok{:}\DecValTok{47}\NormalTok{]}
+\DocumentationTok{\#\#TRATAR DE UNIFICAR LA TABLA DE DESCRIPTIVOS DE LOS ITEMS}
+\CommentTok{\#Se sugiere poder hacer que los datos de los items elegidos, separados del total, esto en el caso de que coincidan estos datos y se ajusten a una normal.}
+
+\NormalTok{i1 }\OtherTok{\textless{}{-}}\NormalTok{ data[}\StringTok{\textquotesingle{}i1\textquotesingle{}}\NormalTok{]}
+\NormalTok{i1 }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{unlist}\NormalTok{(i1))}
+\NormalTok{mean}\OtherTok{\textless{}{-}}\FunctionTok{sapply}\NormalTok{(items, }\AttributeTok{FUN=}\NormalTok{mean)}
+\NormalTok{r }\OtherTok{\textless{}{-}}\NormalTok{ (mean)}
+\NormalTok{mean }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(mean)}
+\NormalTok{sd}\OtherTok{\textless{}{-}}\FunctionTok{sapply}\NormalTok{(items, }\AttributeTok{FUN=}\NormalTok{sd)}
+\NormalTok{skewness}\OtherTok{\textless{}{-}}\FunctionTok{skewness}\NormalTok{(items)}
+\NormalTok{kurtosis}\OtherTok{\textless{}{-}}\FunctionTok{kurtosis}\NormalTok{(items)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in mean.default(x): argument is not numeric or logical: returning NA
+
+## Warning in mean.default(x): argument is not numeric or logical: returning NA
+
+## Warning in mean.default(x): argument is not numeric or logical: returning NA
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{kable}\NormalTok{(}\FunctionTok{list}\NormalTok{(mean, sd, skewness, kurtosis))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}
+
+\centering
+\begin{tabular}[t]{l|r}
+\hline
+  & mean\\
+\hline
+i1 & 0.9655870\\
+\hline
+i2 & 0.5971660\\
+\hline
+i3 & 0.6052632\\
+\hline
+i4 & 0.6740891\\
+\hline
+i5 & 0.7206478\\
+\hline
+i6 & 0.4089069\\
+\hline
+i7 & 0.7469636\\
+\hline
+i8 & 0.7469636\\
+\hline
+i9 & 0.2530364\\
+\hline
+i10 & 0.3967611\\
+\hline
+i11 & 0.4635628\\
+\hline
+i12 & 0.7408907\\
+\hline
+i13 & 0.8684211\\
+\hline
+i14 & 0.8846154\\
+\hline
+i15 & 1.1457490\\
+\hline
+i16 & 0.6497976\\
+\hline
+i17 & 0.4048583\\
+\hline
+i18 & 0.5020243\\
+\hline
+i19 & 0.6740891\\
+\hline
+i20 & 0.3906883\\
+\hline
+i21 & 0.4008097\\
+\hline
+i22 & 0.5000000\\
+\hline
+i23 & 0.6052632\\
+\hline
+i24 & 0.6700405\\
+\hline
+i25 & 0.6538462\\
+\hline
+i26 & 0.7449393\\
+\hline
+i27 & 0.3663968\\
+\hline
+i28 & 0.8137652\\
+\hline
+i29 & 0.6619433\\
+\hline
+i30 & 1.1801619\\
+\hline
+i31 & 0.6336032\\
+\hline
+i32 & 0.3927126\\
+\hline
+i33 & 0.3987854\\
+\hline
+i34 & 0.4149798\\
+\hline
+i35 & 0.8441296\\
+\hline
+i36 & 0.5971660\\
+\hline
+i37 & 0.4210526\\
+\hline
+i38 & 0.6255061\\
+\hline
+i39 & 0.2793522\\
+\hline
+i40 & 0.5141700\\
+\hline
+i41 & 0.3137652\\
+\hline
+i42 & 0.4251012\\
+\hline
+i43 & 0.7004049\\
+\hline
+i44 & 0.4412955\\
+\hline
+i45 & 1.1943320\\
+\hline
+\end{tabular}
+\centering
+\begin{tabular}[t]{l|r}
+\hline
+  & x\\
+\hline
+i1 & 0.7780130\\
+\hline
+i2 & 0.7217795\\
+\hline
+i3 & 0.7775062\\
+\hline
+i4 & 0.7352724\\
+\hline
+i5 & 0.8273340\\
+\hline
+i6 & 0.7281653\\
+\hline
+i7 & 0.8223186\\
+\hline
+i8 & 0.8023425\\
+\hline
+i9 & 0.6098755\\
+\hline
+i10 & 0.6436376\\
+\hline
+i11 & 0.8042031\\
+\hline
+i12 & 0.8507651\\
+\hline
+i13 & 0.8526862\\
+\hline
+i14 & 0.7806263\\
+\hline
+i15 & 1.0146054\\
+\hline
+i16 & 0.7832099\\
+\hline
+i17 & 0.7469048\\
+\hline
+i18 & 0.7283007\\
+\hline
+i19 & 0.7910867\\
+\hline
+i20 & 0.7530831\\
+\hline
+i21 & 0.6780231\\
+\hline
+i22 & 0.7448266\\
+\hline
+i23 & 0.7643506\\
+\hline
+i24 & 0.8021480\\
+\hline
+i25 & 0.7901622\\
+\hline
+i26 & 0.9117915\\
+\hline
+i27 & 0.6186457\\
+\hline
+i28 & 0.8216967\\
+\hline
+i29 & 0.7911074\\
+\hline
+i30 & 1.0319103\\
+\hline
+i31 & 0.7599004\\
+\hline
+i32 & 0.7479706\\
+\hline
+i33 & 0.6777233\\
+\hline
+i34 & 0.7034098\\
+\hline
+i35 & 0.9436432\\
+\hline
+i36 & 0.7863388\\
+\hline
+i37 & 0.6686565\\
+\hline
+i38 & 0.7396598\\
+\hline
+i39 & 0.6066725\\
+\hline
+i40 & 0.7792970\\
+\hline
+i41 & 0.6501153\\
+\hline
+i42 & 0.6987801\\
+\hline
+i43 & 0.8202062\\
+\hline
+i44 & 0.7146647\\
+\hline
+i45 & 1.0164410\\
+\hline
+\end{tabular}
+\centering
+\begin{tabular}[t]{l|l|r|r}
+\hline
+  & Parameter & Skewness & SE\\
+\hline
+i1 & i1 & 0.7344531 & 0.1095412\\
+\hline
+i2 & i2 & 1.1681820 & 0.1095412\\
+\hline
+i3 & i3 & 1.2579569 & 0.1095412\\
+\hline
+i4 & i4 & 0.9975257 & 0.1095412\\
+\hline
+i5 & i5 & 1.0558090 & 0.1095412\\
+\hline
+i6 & i6 & 1.9494339 & 0.1095412\\
+\hline
+i7 & i7 & 0.9818377 & 0.1095412\\
+\hline
+i8 & i8 & 0.9854636 & 0.1095412\\
+\hline
+i9 & i9 & 2.7096186 & 0.1095412\\
+\hline
+i10 & i10 & 1.6960492 & 0.1095412\\
+\hline
+i11 & i11 & 1.8105652 & 0.1095412\\
+\hline
+i12 & i12 & 1.0979578 & 0.1095412\\
+\hline
+i13 & i13 & 0.8068762 & 0.1095412\\
+\hline
+i14 & i14 & 0.7438988 & 0.1095412\\
+\hline
+i15 & i15 & 0.5002889 & 0.1095412\\
+\hline
+i16 & i16 & 1.1358267 & 0.1095412\\
+\hline
+i17 & i17 & 1.9706668 & 0.1095412\\
+\hline
+i18 & i18 & 1.4322262 & 0.1095412\\
+\hline
+i19 & i19 & 1.1673280 & 0.1095412\\
+\hline
+i20 & i20 & 2.0496889 & 0.1095412\\
+\hline
+i21 & i21 & 1.7359194 & 0.1095412\\
+\hline
+i22 & i22 & 1.5230277 & 0.1095412\\
+\hline
+i23 & i23 & 1.2700259 & 0.1095412\\
+\hline
+i24 & i24 & 1.1157259 & 0.1095412\\
+\hline
+i25 & i25 & 1.1193179 & 0.1095412\\
+\hline
+i26 & i26 & 1.1225709 & 0.1095412\\
+\hline
+i27 & i27 & 1.7831838 & 0.1095412\\
+\hline
+i28 & i28 & 0.9513852 & 0.1095412\\
+\hline
+i29 & i29 & 1.0983042 & 0.1095412\\
+\hline
+i30 & i30 & 0.4566519 & 0.1095412\\
+\hline
+i31 & i31 & 1.1427878 & 0.1095412\\
+\hline
+i32 & i32 & 2.1080641 & 0.1095412\\
+\hline
+i33 & i33 & 1.7846491 & 0.1095412\\
+\hline
+i34 & i34 & 1.7439565 & 0.1095412\\
+\hline
+i35 & i35 & 0.9262469 & 0.1095412\\
+\hline
+i36 & i36 & 1.2720761 & 0.1095412\\
+\hline
+i37 & i37 & 1.7215023 & 0.1095412\\
+\hline
+i38 & i38 & 1.0265591 & 0.1095412\\
+\hline
+i39 & i39 & 2.4551165 & 0.1095412\\
+\hline
+i40 & i40 & 1.4503167 & 0.1095412\\
+\hline
+i41 & i41 & 2.2058990 & 0.1095412\\
+\hline
+i42 & i42 & 1.6656087 & 0.1095412\\
+\hline
+i43 & i43 & 1.1123803 & 0.1095412\\
+\hline
+i44 & i44 & 1.6973049 & 0.1095412\\
+\hline
+i45 & i45 & 0.4178039 & 0.1095412\\
+\hline
+\end{tabular}
+\centering
+\begin{tabular}[t]{l|r}
+\hline
+  & x\\
+\hline
+Excess Kur (g2) & NA\\
+\hline
+se & 0.7302967\\
+\hline
+z & NA\\
+\hline
+p & NA\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{i1\_tabla }\OtherTok{\textless{}{-}} \FunctionTok{as.data.frame}\NormalTok{(}\FunctionTok{prop.table}\NormalTok{(}\FunctionTok{table}\NormalTok{(i1))}\SpecialCharTok{*}\DecValTok{100}\NormalTok{)}
+
+
+\FunctionTok{descdist}\NormalTok{(i1, }\AttributeTok{boot =} \DecValTok{1000}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-3-1.pdf}
+
+\begin{verbatim}
+## summary statistics
+## ------
+## min:  0   max:  3 
+## median:  1 
+## mean:  0.965587 
+## estimated sd:  0.778013 
+## estimated skewness:  0.7344531 
+## estimated kurtosis:  3.524764
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(i1\_tabla, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{i1, }\AttributeTok{y=}\NormalTok{Freq)) }\SpecialCharTok{+} \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-3-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{s }\OtherTok{\textless{}{-}} \FunctionTok{mvn}\NormalTok{(items, }\AttributeTok{mvnTest =} \StringTok{"mardia"}\NormalTok{)}
+\FunctionTok{print}\NormalTok{(s}\SpecialCharTok{$}\NormalTok{multivariateNormality)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##              Test        Statistic p value Result
+## 1 Mardia Skewness 48592.3800559761       0     NO
+## 2 Mardia Kurtosis 166.003338254291       0     NO
+## 3             MVN             <NA>    <NA>     NO
+\end{verbatim}
+
+\#Análisis factorial \#\#Análisis factorial exploratorio
+
+Las correlaciones polícóricas
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Se corre las correlaciones policóricas, recomenda}
+\NormalTok{correl }\OtherTok{\textless{}{-}} \FunctionTok{polychoric}\NormalTok{(items)}
+
+\CommentTok{\#Indice KMO}
+\FunctionTok{KMO}\NormalTok{(correl}\SpecialCharTok{$}\NormalTok{rho)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Kaiser-Meyer-Olkin factor adequacy
+## Call: KMO(r = correl$rho)
+## Overall MSA =  0.88
+## MSA for each item = 
+##   i1   i2   i3   i4   i5   i6   i7   i8   i9  i10  i11  i12  i13  i14  i15  i16 
+## 0.85 0.81 0.83 0.94 0.91 0.86 0.90 0.86 0.81 0.91 0.93 0.90 0.93 0.83 0.90 0.96 
+##  i17  i18  i19  i20  i21  i22  i23  i24  i25  i26  i27  i28  i29  i30  i31  i32 
+## 0.89 0.90 0.97 0.95 0.84 0.96 0.93 0.89 0.96 0.72 0.78 0.92 0.80 0.93 0.85 0.91 
+##  i33  i34  i35  i36  i37  i38  i39  i40  i41  i42  i43  i44  i45 
+## 0.84 0.93 0.80 0.93 0.92 0.84 0.84 0.92 0.89 0.95 0.78 0.80 0.92
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#fa.parallel(items, cor = "poly")}
+\CommentTok{\#Parallel analysis suggests that the number of factors =  5  and the number of components =  2   }
+
+\CommentTok{\#El análisis paralelo sugiere 5 items, pero en el procedimiento de interesección se han obtenido 3, por lo que debe probarse.}
+
+
+\NormalTok{exploratorio }\OtherTok{\textless{}{-}} \FunctionTok{factanal}\NormalTok{(items, }\AttributeTok{factors =} \DecValTok{3}\NormalTok{, }\AttributeTok{rotation=}\StringTok{"varimax"}\NormalTok{)}
+
+\FunctionTok{print}\NormalTok{(exploratorio)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## factanal(x = items, factors = 3, rotation = "varimax")
+## 
+## Uniquenesses:
+##    i1    i2    i3    i4    i5    i6    i7    i8    i9   i10   i11   i12   i13 
+## 0.583 0.557 0.460 0.537 0.794 0.525 0.705 0.642 0.544 0.677 0.288 0.483 0.557 
+##   i14   i15   i16   i17   i18   i19   i20   i21   i22   i23   i24   i25   i26 
+## 0.567 0.455 0.518 0.331 0.475 0.568 0.506 0.709 0.499 0.502 0.476 0.552 0.749 
+##   i27   i28   i29   i30   i31   i32   i33   i34   i35   i36   i37   i38   i39 
+## 0.721 0.597 0.579 0.429 0.567 0.278 0.490 0.521 0.563 0.411 0.496 0.508 0.535 
+##   i40   i41   i42   i43   i44   i45 
+## 0.630 0.536 0.415 0.499 0.737 0.428 
+## 
+## Loadings:
+##     Factor1 Factor2 Factor3
+## i1  0.479   0.385   0.197  
+## i2  0.536   0.312   0.240  
+## i3  0.662   0.291   0.129  
+## i4  0.538   0.319   0.268  
+## i5  0.338   0.231   0.196  
+## i6  0.659   0.155   0.133  
+## i7  0.227   0.360   0.337  
+## i8  0.260   0.431   0.323  
+## i9  0.575           0.350  
+## i10 0.429   0.183   0.325  
+## i11 0.803   0.221   0.137  
+## i12 0.591   0.381   0.149  
+## i13 0.394   0.472   0.255  
+## i14 0.262   0.505   0.329  
+## i15 0.126   0.699   0.199  
+## i16 0.448   0.378   0.372  
+## i17 0.738   0.202   0.290  
+## i18 0.570   0.212   0.394  
+## i19 0.453   0.362   0.310  
+## i20 0.571   0.205   0.354  
+## i21 0.167   0.248   0.449  
+## i22 0.584   0.258   0.306  
+## i23 0.393   0.409   0.421  
+## i24 0.587   0.346   0.244  
+## i25 0.365   0.379   0.413  
+## i26 0.175   0.373   0.285  
+## i27 0.198   0.148   0.467  
+## i28 0.396   0.464   0.177  
+## i29 0.254   0.423   0.421  
+## i30 0.105   0.741   0.103  
+## i31 0.497   0.263   0.342  
+## i32 0.817   0.176   0.151  
+## i33 0.588   0.111   0.389  
+## i34 0.464   0.231   0.459  
+## i35 0.368   0.492   0.244  
+## i36 0.640   0.360   0.224  
+## i37 0.445   0.323   0.449  
+## i38 0.220   0.315   0.587  
+## i39 0.518           0.435  
+## i40 0.303   0.392   0.353  
+## i41 0.543   0.108   0.397  
+## i42 0.631   0.228   0.368  
+## i43 0.202   0.365   0.572  
+## i44 0.221   0.205   0.415  
+## i45 0.144   0.712   0.211  
+## 
+##                Factor1 Factor2 Factor3
+## SS loadings      9.996   5.735   5.069
+## Proportion Var   0.222   0.127   0.113
+## Cumulative Var   0.222   0.350   0.462
+## 
+## Test of the hypothesis that 3 factors are sufficient.
+## The chi square statistic is 2073.02 on 858 degrees of freedom.
+## The p-value is 4.48e-102
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ASIfactor}\OtherTok{\textless{}{-}}\FunctionTok{fa}\NormalTok{(items,}\AttributeTok{nfactors =} \DecValTok{5}\NormalTok{,}\AttributeTok{fm =} \StringTok{"ml"}\NormalTok{,}\AttributeTok{rotate =}\StringTok{"varimax"}\NormalTok{,}\AttributeTok{cor =} \StringTok{"poly"}\NormalTok{)}
+
+
+\FunctionTok{print}\NormalTok{(ASIfactor,}\AttributeTok{digits =} \DecValTok{2}\NormalTok{,}\AttributeTok{cut =}\NormalTok{ .}\DecValTok{40}\NormalTok{,}\AttributeTok{sort=}\ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Factor Analysis using method =  ml
+## Call: fa(r = items, nfactors = 5, rotate = "varimax", fm = "ml", cor = "poly")
+## Standardized loadings (pattern matrix) based upon correlation matrix
+##     item  ML1  ML4  ML3  ML2   ML5   h2   u2 com
+## i11   11 0.85                      0.86 0.14 1.4
+## i32   32 0.83                      0.84 0.16 1.5
+## i17   17 0.78                      0.86 0.14 1.9
+## i6     6 0.72                      0.65 0.35 1.5
+## i3     3 0.72                      0.68 0.32 1.6
+## i9     9 0.66                      0.70 0.30 2.2
+## i36   36 0.65                      0.73 0.27 2.4
+## i12   12 0.65                      0.63 0.37 2.0
+## i18   18 0.63      0.46            0.71 0.29 2.4
+## i22   22 0.63                      0.63 0.37 2.2
+## i42   42 0.62 0.54                 0.78 0.22 2.5
+## i24   24 0.62                      0.66 0.34 2.5
+## i33   33 0.61 0.46                 0.67 0.33 2.4
+## i2     2 0.59                      0.56 0.44 2.3
+## i20   20 0.58 0.45                 0.70 0.30 2.9
+## i4     4 0.58                      0.60 0.40 2.8
+## i41   41 0.57 0.53                 0.66 0.34 2.3
+## i1     1 0.56                      0.53 0.47 2.4
+## i31   31 0.52                      0.56 0.44 3.0
+## i16   16 0.50      0.49            0.66 0.34 3.3
+## i10   10 0.48                      0.48 0.52 2.9
+## i19   19 0.48                      0.54 0.46 3.4
+## i28   28 0.46           0.45       0.50 0.50 2.8
+## i13   13 0.45                      0.54 0.46 3.3
+## i5     5                           0.29 0.71 2.9
+## i34   34 0.45 0.58                 0.66 0.34 2.7
+## i39   39 0.53 0.58                 0.69 0.31 2.4
+## i44   44      0.55                 0.46 0.54 2.1
+## i37   37 0.45 0.53                 0.70 0.30 3.4
+## i21   21      0.44                 0.43 0.57 3.3
+## i27   27      0.42                 0.40 0.60 2.8
+## i38   38      0.43 0.63            0.68 0.32 2.3
+## i7     7           0.58       0.46 0.67 0.33 2.8
+## i23   23 0.42      0.56            0.66 0.34 3.1
+## i8     8           0.54            0.50 0.50 2.4
+## i14   14           0.52 0.42       0.57 0.43 2.8
+## i43   43      0.49 0.52            0.63 0.37 2.8
+## i25   25           0.50            0.61 0.39 3.5
+## i30   30                0.80       0.72 0.28 1.3
+## i45   45                0.76       0.73 0.27 1.6
+## i15   15           0.48 0.62       0.66 0.34 2.1
+## i35   35                0.52       0.58 0.42 2.9
+## i40   40      0.44      0.44       0.54 0.46 3.4
+## i29   29                           0.51 0.49 3.8
+## i26   26                           0.36 0.64 3.6
+## 
+##                         ML1  ML4  ML3  ML2  ML5
+## SS loadings           11.47 5.33 5.14 5.04 0.76
+## Proportion Var         0.25 0.12 0.11 0.11 0.02
+## Cumulative Var         0.25 0.37 0.49 0.60 0.62
+## Proportion Explained   0.41 0.19 0.19 0.18 0.03
+## Cumulative Proportion  0.41 0.61 0.79 0.97 1.00
+## 
+## Mean item complexity =  2.6
+## Test of the hypothesis that 5 factors are sufficient.
+## 
+## The degrees of freedom for the null model are  990  and the objective function was  45.04 with Chi Square of  21490.85
+## The degrees of freedom for the model are 775  and the objective function was  9.7 
+## 
+## The root mean square of the residuals (RMSR) is  0.03 
+## The df corrected root mean square of the residuals is  0.04 
+## 
+## The harmonic number of observations is  494 with the empirical chi square  1061.46  with prob <  2.9e-11 
+## The total number of observations was  494  with Likelihood Chi Square =  4598.41  with prob <  0 
+## 
+## Tucker Lewis Index of factoring reliability =  0.76
+## RMSEA index =  0.1  and the 90 % confidence intervals are  0.097 0.103
+## BIC =  -208.55
+## Fit based upon off diagonal values = 1
+## Measures of factor score adequacy             
+##                                                    ML1  ML4  ML3  ML2  ML5
+## Correlation of (regression) scores with factors   0.96 0.89 0.90 0.92 0.82
+## Multiple R square of scores with factors          0.92 0.80 0.81 0.85 0.68
+## Minimum correlation of possible factor scores     0.84 0.59 0.61 0.69 0.35
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# write\_xlsx(w,"cargas\_factoriales.xlsx")}
+
+
+\FunctionTok{corrplot}\NormalTok{(}\FunctionTok{cor}\NormalTok{(items, }\AttributeTok{use=}\StringTok{"complete.obs"}\NormalTok{), }\AttributeTok{order =} \StringTok{"original"}\NormalTok{, }\AttributeTok{tl.col=}\StringTok{\textquotesingle{}black\textquotesingle{}}\NormalTok{, }\AttributeTok{tl.cex=}\NormalTok{.}\DecValTok{75}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-4-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{corrplot}\NormalTok{(}\FunctionTok{cor}\NormalTok{(items, }\AttributeTok{use=}\StringTok{"complete.obs"}\NormalTok{), }\AttributeTok{order =} \StringTok{"hclust"}\NormalTok{, }\AttributeTok{tl.col=}\StringTok{\textquotesingle{}black\textquotesingle{}}\NormalTok{, }\AttributeTok{tl.cex=}\NormalTok{.}\DecValTok{75}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-4-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{IRTModel }\OtherTok{\textless{}{-}} \FunctionTok{mirt}\NormalTok{(items, }\AttributeTok{model =} \DecValTok{1}\NormalTok{, }\AttributeTok{itemtype =} \StringTok{"gpcm"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Iteration: 1, Log-Lik: -19260.457, Max-Change: 4.14880Iteration: 2, Log-Lik: -17442.557, Max-Change: 1.22447Iteration: 3, Log-Lik: -17377.561, Max-Change: 0.88349Iteration: 4, Log-Lik: -17369.104, Max-Change: 0.47915Iteration: 5, Log-Lik: -17366.665, Max-Change: 0.28558Iteration: 6, Log-Lik: -17365.133, Max-Change: 0.18623Iteration: 7, Log-Lik: -17362.798, Max-Change: 0.05919Iteration: 8, Log-Lik: -17361.738, Max-Change: 0.08952Iteration: 9, Log-Lik: -17360.949, Max-Change: 0.07553Iteration: 10, Log-Lik: -17359.453, Max-Change: 0.02132Iteration: 11, Log-Lik: -17359.017, Max-Change: 0.01860Iteration: 12, Log-Lik: -17358.730, Max-Change: 0.01464Iteration: 13, Log-Lik: -17358.105, Max-Change: 0.00978Iteration: 14, Log-Lik: -17357.937, Max-Change: 0.00938Iteration: 15, Log-Lik: -17357.787, Max-Change: 0.00866Iteration: 16, Log-Lik: -17357.383, Max-Change: 0.00756Iteration: 17, Log-Lik: -17357.281, Max-Change: 0.00703Iteration: 18, Log-Lik: -17357.186, Max-Change: 0.00654Iteration: 19, Log-Lik: -17356.723, Max-Change: 0.00534Iteration: 20, Log-Lik: -17356.661, Max-Change: 0.00523Iteration: 21, Log-Lik: -17356.602, Max-Change: 0.00511Iteration: 22, Log-Lik: -17356.285, Max-Change: 0.00441Iteration: 23, Log-Lik: -17356.245, Max-Change: 0.00550Iteration: 24, Log-Lik: -17356.205, Max-Change: 0.00543Iteration: 25, Log-Lik: -17355.985, Max-Change: 0.00282Iteration: 26, Log-Lik: -17355.958, Max-Change: 0.00700Iteration: 27, Log-Lik: -17355.929, Max-Change: 0.00286Iteration: 28, Log-Lik: -17355.904, Max-Change: 0.00770Iteration: 29, Log-Lik: -17355.876, Max-Change: 0.00278Iteration: 30, Log-Lik: -17355.852, Max-Change: 0.00793Iteration: 31, Log-Lik: -17355.811, Max-Change: 0.00292Iteration: 32, Log-Lik: -17355.790, Max-Change: 0.00810Iteration: 33, Log-Lik: -17355.767, Max-Change: 0.00255Iteration: 34, Log-Lik: -17355.753, Max-Change: 0.00697Iteration: 35, Log-Lik: -17355.731, Max-Change: 0.00807Iteration: 36, Log-Lik: -17355.709, Max-Change: 0.00213Iteration: 37, Log-Lik: -17355.698, Max-Change: 0.00672Iteration: 38, Log-Lik: -17355.677, Max-Change: 0.00681Iteration: 39, Log-Lik: -17355.657, Max-Change: 0.00238Iteration: 40, Log-Lik: -17355.642, Max-Change: 0.00744Iteration: 41, Log-Lik: -17355.623, Max-Change: 0.00233Iteration: 42, Log-Lik: -17355.607, Max-Change: 0.00755Iteration: 43, Log-Lik: -17355.582, Max-Change: 0.00237Iteration: 44, Log-Lik: -17355.568, Max-Change: 0.00747Iteration: 45, Log-Lik: -17355.552, Max-Change: 0.00246Iteration: 46, Log-Lik: -17355.542, Max-Change: 0.00190Iteration: 47, Log-Lik: -17355.530, Max-Change: 0.00791Iteration: 48, Log-Lik: -17355.513, Max-Change: 0.00218Iteration: 49, Log-Lik: -17355.506, Max-Change: 0.00784Iteration: 50, Log-Lik: -17355.492, Max-Change: 0.00199Iteration: 51, Log-Lik: -17355.481, Max-Change: 0.00773Iteration: 52, Log-Lik: -17355.463, Max-Change: 0.00224Iteration: 53, Log-Lik: -17355.453, Max-Change: 0.00157Iteration: 54, Log-Lik: -17355.444, Max-Change: 0.00822Iteration: 55, Log-Lik: -17355.426, Max-Change: 0.00209Iteration: 56, Log-Lik: -17355.416, Max-Change: 0.00768Iteration: 57, Log-Lik: -17355.405, Max-Change: 0.00164Iteration: 58, Log-Lik: -17355.401, Max-Change: 0.00189Iteration: 59, Log-Lik: -17355.393, Max-Change: 0.00787Iteration: 60, Log-Lik: -17355.382, Max-Change: 0.00189Iteration: 61, Log-Lik: -17355.378, Max-Change: 0.00181Iteration: 62, Log-Lik: -17355.370, Max-Change: 0.00795Iteration: 63, Log-Lik: -17355.360, Max-Change: 0.00176Iteration: 64, Log-Lik: -17355.357, Max-Change: 0.00168Iteration: 65, Log-Lik: -17355.350, Max-Change: 0.00194Iteration: 66, Log-Lik: -17355.343, Max-Change: 0.00811Iteration: 67, Log-Lik: -17355.333, Max-Change: 0.00169Iteration: 68, Log-Lik: -17355.326, Max-Change: 0.00186Iteration: 69, Log-Lik: -17355.320, Max-Change: 0.00822Iteration: 70, Log-Lik: -17355.310, Max-Change: 0.00158Iteration: 71, Log-Lik: -17355.304, Max-Change: 0.00176Iteration: 72, Log-Lik: -17355.299, Max-Change: 0.00827Iteration: 73, Log-Lik: -17355.290, Max-Change: 0.00192Iteration: 74, Log-Lik: -17355.284, Max-Change: 0.00799Iteration: 75, Log-Lik: -17355.277, Max-Change: 0.00173Iteration: 76, Log-Lik: -17355.275, Max-Change: 0.00156Iteration: 77, Log-Lik: -17355.270, Max-Change: 0.00116Iteration: 78, Log-Lik: -17355.266, Max-Change: 0.00125Iteration: 79, Log-Lik: -17355.251, Max-Change: 0.01947Iteration: 80, Log-Lik: -17355.239, Max-Change: 0.00157Iteration: 81, Log-Lik: -17355.234, Max-Change: 0.00196Iteration: 82, Log-Lik: -17355.228, Max-Change: 0.00148Iteration: 83, Log-Lik: -17355.225, Max-Change: 0.00204Iteration: 84, Log-Lik: -17355.220, Max-Change: 0.00153Iteration: 85, Log-Lik: -17355.217, Max-Change: 0.00133Iteration: 86, Log-Lik: -17355.214, Max-Change: 0.00112Iteration: 87, Log-Lik: -17355.212, Max-Change: 0.00106Iteration: 88, Log-Lik: -17355.207, Max-Change: 0.00122Iteration: 89, Log-Lik: -17355.205, Max-Change: 0.00949Iteration: 90, Log-Lik: -17355.198, Max-Change: 0.00103Iteration: 91, Log-Lik: -17355.197, Max-Change: 0.00095Iteration: 92, Log-Lik: -17355.194, Max-Change: 0.00117Iteration: 93, Log-Lik: -17355.192, Max-Change: 0.00102Iteration: 94, Log-Lik: -17355.188, Max-Change: 0.00104Iteration: 95, Log-Lik: -17355.186, Max-Change: 0.00132Iteration: 96, Log-Lik: -17355.184, Max-Change: 0.00093Iteration: 97, Log-Lik: -17355.175, Max-Change: 0.01000Iteration: 98, Log-Lik: -17355.169, Max-Change: 0.00095Iteration: 99, Log-Lik: -17355.167, Max-Change: 0.00073Iteration: 100, Log-Lik: -17355.165, Max-Change: 0.00847Iteration: 101, Log-Lik: -17355.160, Max-Change: 0.00088Iteration: 102, Log-Lik: -17355.158, Max-Change: 0.00070Iteration: 103, Log-Lik: -17355.156, Max-Change: 0.00070Iteration: 104, Log-Lik: -17355.155, Max-Change: 0.00073Iteration: 105, Log-Lik: -17355.154, Max-Change: 0.00070Iteration: 106, Log-Lik: -17355.146, Max-Change: 0.00195Iteration: 107, Log-Lik: -17355.145, Max-Change: 0.00159Iteration: 108, Log-Lik: -17355.144, Max-Change: 0.00075Iteration: 109, Log-Lik: -17355.143, Max-Change: 0.01188Iteration: 110, Log-Lik: -17355.137, Max-Change: 0.00092Iteration: 111, Log-Lik: -17355.135, Max-Change: 0.00059Iteration: 112, Log-Lik: -17355.134, Max-Change: 0.00061Iteration: 113, Log-Lik: -17355.133, Max-Change: 0.00060Iteration: 114, Log-Lik: -17355.132, Max-Change: 0.00078Iteration: 115, Log-Lik: -17355.132, Max-Change: 0.00067Iteration: 116, Log-Lik: -17355.131, Max-Change: 0.00075Iteration: 117, Log-Lik: -17355.131, Max-Change: 0.00110Iteration: 118, Log-Lik: -17355.130, Max-Change: 0.00118Iteration: 119, Log-Lik: -17355.130, Max-Change: 0.00165Iteration: 120, Log-Lik: -17355.130, Max-Change: 0.00199Iteration: 121, Log-Lik: -17355.129, Max-Change: 0.00122Iteration: 122, Log-Lik: -17355.129, Max-Change: 0.00145Iteration: 123, Log-Lik: -17355.129, Max-Change: 0.00198Iteration: 124, Log-Lik: -17355.129, Max-Change: 0.00108Iteration: 125, Log-Lik: -17355.128, Max-Change: 0.00149Iteration: 126, Log-Lik: -17355.128, Max-Change: 0.00181Iteration: 127, Log-Lik: -17355.128, Max-Change: 0.00112Iteration: 128, Log-Lik: -17355.127, Max-Change: 0.00135Iteration: 129, Log-Lik: -17355.127, Max-Change: 0.00182Iteration: 130, Log-Lik: -17355.127, Max-Change: 0.00101Iteration: 131, Log-Lik: -17355.127, Max-Change: 0.00138Iteration: 132, Log-Lik: -17355.126, Max-Change: 0.00169Iteration: 133, Log-Lik: -17355.126, Max-Change: 0.00105Iteration: 134, Log-Lik: -17355.126, Max-Change: 0.00127Iteration: 135, Log-Lik: -17355.126, Max-Change: 0.00170Iteration: 136, Log-Lik: -17355.126, Max-Change: 0.00096Iteration: 137, Log-Lik: -17355.125, Max-Change: 0.00130Iteration: 138, Log-Lik: -17355.125, Max-Change: 0.00160Iteration: 139, Log-Lik: -17355.125, Max-Change: 0.00099Iteration: 140, Log-Lik: -17355.125, Max-Change: 0.00121Iteration: 141, Log-Lik: -17355.124, Max-Change: 0.00161Iteration: 142, Log-Lik: -17355.124, Max-Change: 0.00092Iteration: 143, Log-Lik: -17355.124, Max-Change: 0.00124Iteration: 144, Log-Lik: -17355.124, Max-Change: 0.00153Iteration: 145, Log-Lik: -17355.124, Max-Change: 0.00095Iteration: 146, Log-Lik: -17355.123, Max-Change: 0.00117Iteration: 147, Log-Lik: -17355.123, Max-Change: 0.00154Iteration: 148, Log-Lik: -17355.123, Max-Change: 0.00090Iteration: 149, Log-Lik: -17355.123, Max-Change: 0.00119Iteration: 150, Log-Lik: -17355.123, Max-Change: 0.00148Iteration: 151, Log-Lik: -17355.122, Max-Change: 0.00092Iteration: 152, Log-Lik: -17355.122, Max-Change: 0.00114Iteration: 153, Log-Lik: -17355.122, Max-Change: 0.00149Iteration: 154, Log-Lik: -17355.122, Max-Change: 0.00088Iteration: 155, Log-Lik: -17355.122, Max-Change: 0.00115Iteration: 156, Log-Lik: -17355.122, Max-Change: 0.00144Iteration: 157, Log-Lik: -17355.121, Max-Change: 0.00089Iteration: 158, Log-Lik: -17355.121, Max-Change: 0.00111Iteration: 159, Log-Lik: -17355.121, Max-Change: 0.00145Iteration: 160, Log-Lik: -17355.121, Max-Change: 0.00086Iteration: 161, Log-Lik: -17355.121, Max-Change: 0.00113Iteration: 162, Log-Lik: -17355.120, Max-Change: 0.00141Iteration: 163, Log-Lik: -17355.120, Max-Change: 0.00087Iteration: 164, Log-Lik: -17355.120, Max-Change: 0.00109Iteration: 165, Log-Lik: -17355.120, Max-Change: 0.00142Iteration: 166, Log-Lik: -17355.120, Max-Change: 0.00084Iteration: 167, Log-Lik: -17355.120, Max-Change: 0.00110Iteration: 168, Log-Lik: -17355.119, Max-Change: 0.00138Iteration: 169, Log-Lik: -17355.119, Max-Change: 0.00086Iteration: 170, Log-Lik: -17355.119, Max-Change: 0.00107Iteration: 171, Log-Lik: -17355.119, Max-Change: 0.00139Iteration: 172, Log-Lik: -17355.119, Max-Change: 0.00083Iteration: 173, Log-Lik: -17355.119, Max-Change: 0.00108Iteration: 174, Log-Lik: -17355.118, Max-Change: 0.00136Iteration: 175, Log-Lik: -17355.118, Max-Change: 0.00084Iteration: 176, Log-Lik: -17355.118, Max-Change: 0.00106Iteration: 177, Log-Lik: -17355.118, Max-Change: 0.00136Iteration: 178, Log-Lik: -17355.118, Max-Change: 0.00082Iteration: 179, Log-Lik: -17355.118, Max-Change: 0.00106Iteration: 180, Log-Lik: -17355.117, Max-Change: 0.00134Iteration: 181, Log-Lik: -17355.117, Max-Change: 0.00083Iteration: 182, Log-Lik: -17355.117, Max-Change: 0.00104Iteration: 183, Log-Lik: -17355.117, Max-Change: 0.00134Iteration: 184, Log-Lik: -17355.117, Max-Change: 0.00081Iteration: 185, Log-Lik: -17355.117, Max-Change: 0.00105Iteration: 186, Log-Lik: -17355.117, Max-Change: 0.00132Iteration: 187, Log-Lik: -17355.116, Max-Change: 0.00082Iteration: 188, Log-Lik: -17355.116, Max-Change: 0.00103Iteration: 189, Log-Lik: -17355.116, Max-Change: 0.00132Iteration: 190, Log-Lik: -17355.116, Max-Change: 0.00080Iteration: 191, Log-Lik: -17355.116, Max-Change: 0.00103Iteration: 192, Log-Lik: -17355.116, Max-Change: 0.00131Iteration: 193, Log-Lik: -17355.115, Max-Change: 0.00080Iteration: 194, Log-Lik: -17355.115, Max-Change: 0.00102Iteration: 195, Log-Lik: -17355.115, Max-Change: 0.00131Iteration: 196, Log-Lik: -17355.115, Max-Change: 0.00079Iteration: 197, Log-Lik: -17355.115, Max-Change: 0.00102Iteration: 198, Log-Lik: -17355.115, Max-Change: 0.00129Iteration: 199, Log-Lik: -17355.115, Max-Change: 0.00079Iteration: 200, Log-Lik: -17355.114, Max-Change: 0.00101Iteration: 201, Log-Lik: -17355.114, Max-Change: 0.00129Iteration: 202, Log-Lik: -17355.114, Max-Change: 0.00078Iteration: 203, Log-Lik: -17355.114, Max-Change: 0.00101Iteration: 204, Log-Lik: -17355.114, Max-Change: 0.00128Iteration: 205, Log-Lik: -17355.114, Max-Change: 0.00078Iteration: 206, Log-Lik: -17355.114, Max-Change: 0.00099Iteration: 207, Log-Lik: -17355.113, Max-Change: 0.00127Iteration: 208, Log-Lik: -17355.113, Max-Change: 0.00078Iteration: 209, Log-Lik: -17355.113, Max-Change: 0.00099Iteration: 210, Log-Lik: -17355.113, Max-Change: 0.00126Iteration: 211, Log-Lik: -17355.113, Max-Change: 0.00078Iteration: 212, Log-Lik: -17355.113, Max-Change: 0.00098Iteration: 213, Log-Lik: -17355.113, Max-Change: 0.00126Iteration: 214, Log-Lik: -17355.112, Max-Change: 0.00077Iteration: 215, Log-Lik: -17355.112, Max-Change: 0.00098Iteration: 216, Log-Lik: -17355.112, Max-Change: 0.00125Iteration: 217, Log-Lik: -17355.112, Max-Change: 0.00077Iteration: 218, Log-Lik: -17355.112, Max-Change: 0.00097Iteration: 219, Log-Lik: -17355.112, Max-Change: 0.00124Iteration: 220, Log-Lik: -17355.112, Max-Change: 0.00076Iteration: 221, Log-Lik: -17355.111, Max-Change: 0.00097Iteration: 222, Log-Lik: -17355.111, Max-Change: 0.00123Iteration: 223, Log-Lik: -17355.111, Max-Change: 0.00076Iteration: 224, Log-Lik: -17355.111, Max-Change: 0.00096Iteration: 225, Log-Lik: -17355.111, Max-Change: 0.00123Iteration: 226, Log-Lik: -17355.111, Max-Change: 0.00075Iteration: 227, Log-Lik: -17355.111, Max-Change: 0.00096Iteration: 228, Log-Lik: -17355.110, Max-Change: 0.00122Iteration: 229, Log-Lik: -17355.110, Max-Change: 0.00075Iteration: 230, Log-Lik: -17355.110, Max-Change: 0.00095Iteration: 231, Log-Lik: -17355.110, Max-Change: 0.00122Iteration: 232, Log-Lik: -17355.110, Max-Change: 0.00075Iteration: 233, Log-Lik: -17355.110, Max-Change: 0.00095Iteration: 234, Log-Lik: -17355.110, Max-Change: 0.00121Iteration: 235, Log-Lik: -17355.110, Max-Change: 0.00074Iteration: 236, Log-Lik: -17355.109, Max-Change: 0.00094Iteration: 237, Log-Lik: -17355.109, Max-Change: 0.00120Iteration: 238, Log-Lik: -17355.109, Max-Change: 0.00074Iteration: 239, Log-Lik: -17355.109, Max-Change: 0.00094Iteration: 240, Log-Lik: -17355.109, Max-Change: 0.00120Iteration: 241, Log-Lik: -17355.109, Max-Change: 0.00073Iteration: 242, Log-Lik: -17355.109, Max-Change: 0.00093Iteration: 243, Log-Lik: -17355.108, Max-Change: 0.00119Iteration: 244, Log-Lik: -17355.108, Max-Change: 0.00073Iteration: 245, Log-Lik: -17355.108, Max-Change: 0.00093Iteration: 246, Log-Lik: -17355.108, Max-Change: 0.00118Iteration: 247, Log-Lik: -17355.108, Max-Change: 0.00073Iteration: 248, Log-Lik: -17355.108, Max-Change: 0.00093Iteration: 249, Log-Lik: -17355.108, Max-Change: 0.00118Iteration: 250, Log-Lik: -17355.108, Max-Change: 0.00072Iteration: 251, Log-Lik: -17355.107, Max-Change: 0.00092Iteration: 252, Log-Lik: -17355.107, Max-Change: 0.00117Iteration: 253, Log-Lik: -17355.107, Max-Change: 0.00072Iteration: 254, Log-Lik: -17355.107, Max-Change: 0.00092Iteration: 255, Log-Lik: -17355.107, Max-Change: 0.00117Iteration: 256, Log-Lik: -17355.107, Max-Change: 0.00072Iteration: 257, Log-Lik: -17355.107, Max-Change: 0.00091Iteration: 258, Log-Lik: -17355.107, Max-Change: 0.00116Iteration: 259, Log-Lik: -17355.106, Max-Change: 0.00071Iteration: 260, Log-Lik: -17355.106, Max-Change: 0.00091Iteration: 261, Log-Lik: -17355.106, Max-Change: 0.00115Iteration: 262, Log-Lik: -17355.106, Max-Change: 0.00071Iteration: 263, Log-Lik: -17355.106, Max-Change: 0.00090Iteration: 264, Log-Lik: -17355.106, Max-Change: 0.00115Iteration: 265, Log-Lik: -17355.106, Max-Change: 0.00071Iteration: 266, Log-Lik: -17355.106, Max-Change: 0.00090Iteration: 267, Log-Lik: -17355.106, Max-Change: 0.00114Iteration: 268, Log-Lik: -17355.105, Max-Change: 0.00070Iteration: 269, Log-Lik: -17355.105, Max-Change: 0.00089Iteration: 270, Log-Lik: -17355.105, Max-Change: 0.00114Iteration: 271, Log-Lik: -17355.105, Max-Change: 0.00070Iteration: 272, Log-Lik: -17355.105, Max-Change: 0.00089Iteration: 273, Log-Lik: -17355.105, Max-Change: 0.00113Iteration: 274, Log-Lik: -17355.105, Max-Change: 0.00070Iteration: 275, Log-Lik: -17355.105, Max-Change: 0.00089Iteration: 276, Log-Lik: -17355.104, Max-Change: 0.00113Iteration: 277, Log-Lik: -17355.104, Max-Change: 0.00069Iteration: 278, Log-Lik: -17355.104, Max-Change: 0.00088Iteration: 279, Log-Lik: -17355.104, Max-Change: 0.00112Iteration: 280, Log-Lik: -17355.104, Max-Change: 0.00069Iteration: 281, Log-Lik: -17355.104, Max-Change: 0.00088Iteration: 282, Log-Lik: -17355.104, Max-Change: 0.00112Iteration: 283, Log-Lik: -17355.104, Max-Change: 0.00069Iteration: 284, Log-Lik: -17355.104, Max-Change: 0.00087Iteration: 285, Log-Lik: -17355.103, Max-Change: 0.00111Iteration: 286, Log-Lik: -17355.103, Max-Change: 0.00068Iteration: 287, Log-Lik: -17355.103, Max-Change: 0.00087Iteration: 288, Log-Lik: -17355.103, Max-Change: 0.00110Iteration: 289, Log-Lik: -17355.103, Max-Change: 0.00068Iteration: 290, Log-Lik: -17355.103, Max-Change: 0.00086Iteration: 291, Log-Lik: -17355.103, Max-Change: 0.00110Iteration: 292, Log-Lik: -17355.103, Max-Change: 0.00068Iteration: 293, Log-Lik: -17355.103, Max-Change: 0.00086Iteration: 294, Log-Lik: -17355.102, Max-Change: 0.00109Iteration: 295, Log-Lik: -17355.102, Max-Change: 0.00067Iteration: 296, Log-Lik: -17355.102, Max-Change: 0.00086Iteration: 297, Log-Lik: -17355.102, Max-Change: 0.00109Iteration: 298, Log-Lik: -17355.102, Max-Change: 0.00067Iteration: 299, Log-Lik: -17355.102, Max-Change: 0.00085Iteration: 300, Log-Lik: -17355.102, Max-Change: 0.00108Iteration: 301, Log-Lik: -17355.102, Max-Change: 0.00067Iteration: 302, Log-Lik: -17355.102, Max-Change: 0.00085Iteration: 303, Log-Lik: -17355.101, Max-Change: 0.00108Iteration: 304, Log-Lik: -17355.101, Max-Change: 0.00066Iteration: 305, Log-Lik: -17355.101, Max-Change: 0.00084Iteration: 306, Log-Lik: -17355.101, Max-Change: 0.00107Iteration: 307, Log-Lik: -17355.101, Max-Change: 0.00066Iteration: 308, Log-Lik: -17355.101, Max-Change: 0.00084Iteration: 309, Log-Lik: -17355.101, Max-Change: 0.00107Iteration: 310, Log-Lik: -17355.101, Max-Change: 0.00066Iteration: 311, Log-Lik: -17355.101, Max-Change: 0.00084Iteration: 312, Log-Lik: -17355.101, Max-Change: 0.00106Iteration: 313, Log-Lik: -17355.100, Max-Change: 0.00065Iteration: 314, Log-Lik: -17355.100, Max-Change: 0.00083Iteration: 315, Log-Lik: -17355.100, Max-Change: 0.00106Iteration: 316, Log-Lik: -17355.100, Max-Change: 0.00065Iteration: 317, Log-Lik: -17355.100, Max-Change: 0.00083Iteration: 318, Log-Lik: -17355.100, Max-Change: 0.00105Iteration: 319, Log-Lik: -17355.100, Max-Change: 0.00065Iteration: 320, Log-Lik: -17355.100, Max-Change: 0.00082Iteration: 321, Log-Lik: -17355.100, Max-Change: 0.00105Iteration: 322, Log-Lik: -17355.099, Max-Change: 0.00065Iteration: 323, Log-Lik: -17355.099, Max-Change: 0.00082Iteration: 324, Log-Lik: -17355.099, Max-Change: 0.00104Iteration: 325, Log-Lik: -17355.099, Max-Change: 0.00064Iteration: 326, Log-Lik: -17355.099, Max-Change: 0.00082Iteration: 327, Log-Lik: -17355.099, Max-Change: 0.00104Iteration: 328, Log-Lik: -17355.099, Max-Change: 0.00064Iteration: 329, Log-Lik: -17355.099, Max-Change: 0.00081Iteration: 330, Log-Lik: -17355.099, Max-Change: 0.00103Iteration: 331, Log-Lik: -17355.099, Max-Change: 0.00064Iteration: 332, Log-Lik: -17355.098, Max-Change: 0.00081Iteration: 333, Log-Lik: -17355.098, Max-Change: 0.00103Iteration: 334, Log-Lik: -17355.098, Max-Change: 0.00063Iteration: 335, Log-Lik: -17355.098, Max-Change: 0.00080Iteration: 336, Log-Lik: -17355.098, Max-Change: 0.00102Iteration: 337, Log-Lik: -17355.098, Max-Change: 0.00063Iteration: 338, Log-Lik: -17355.098, Max-Change: 0.00080Iteration: 339, Log-Lik: -17355.098, Max-Change: 0.00102Iteration: 340, Log-Lik: -17355.098, Max-Change: 0.00063Iteration: 341, Log-Lik: -17355.098, Max-Change: 0.00080Iteration: 342, Log-Lik: -17355.098, Max-Change: 0.00101Iteration: 343, Log-Lik: -17355.097, Max-Change: 0.00062Iteration: 344, Log-Lik: -17355.097, Max-Change: 0.00079Iteration: 345, Log-Lik: -17355.097, Max-Change: 0.00101Iteration: 346, Log-Lik: -17355.097, Max-Change: 0.00062Iteration: 347, Log-Lik: -17355.097, Max-Change: 0.00079Iteration: 348, Log-Lik: -17355.097, Max-Change: 0.00100Iteration: 349, Log-Lik: -17355.097, Max-Change: 0.00062Iteration: 350, Log-Lik: -17355.097, Max-Change: 0.00079Iteration: 351, Log-Lik: -17355.097, Max-Change: 0.00100Iteration: 352, Log-Lik: -17355.097, Max-Change: 0.00062Iteration: 353, Log-Lik: -17355.096, Max-Change: 0.00078Iteration: 354, Log-Lik: -17355.096, Max-Change: 0.00099Iteration: 355, Log-Lik: -17355.096, Max-Change: 0.00061Iteration: 356, Log-Lik: -17355.096, Max-Change: 0.00078Iteration: 357, Log-Lik: -17355.096, Max-Change: 0.00099Iteration: 358, Log-Lik: -17355.096, Max-Change: 0.00061Iteration: 359, Log-Lik: -17355.096, Max-Change: 0.00077Iteration: 360, Log-Lik: -17355.096, Max-Change: 0.00098Iteration: 361, Log-Lik: -17355.096, Max-Change: 0.00061Iteration: 362, Log-Lik: -17355.096, Max-Change: 0.00077Iteration: 363, Log-Lik: -17355.096, Max-Change: 0.00098Iteration: 364, Log-Lik: -17355.096, Max-Change: 0.00060Iteration: 365, Log-Lik: -17355.095, Max-Change: 0.00077Iteration: 366, Log-Lik: -17355.095, Max-Change: 0.00097Iteration: 367, Log-Lik: -17355.095, Max-Change: 0.00060Iteration: 368, Log-Lik: -17355.095, Max-Change: 0.00076Iteration: 369, Log-Lik: -17355.095, Max-Change: 0.00097Iteration: 370, Log-Lik: -17355.095, Max-Change: 0.00060Iteration: 371, Log-Lik: -17355.095, Max-Change: 0.00076Iteration: 372, Log-Lik: -17355.095, Max-Change: 0.00097Iteration: 373, Log-Lik: -17355.095, Max-Change: 0.00060Iteration: 374, Log-Lik: -17355.095, Max-Change: 0.00076Iteration: 375, Log-Lik: -17355.095, Max-Change: 0.00096Iteration: 376, Log-Lik: -17355.094, Max-Change: 0.00059Iteration: 377, Log-Lik: -17355.094, Max-Change: 0.00075Iteration: 378, Log-Lik: -17355.094, Max-Change: 0.00096Iteration: 379, Log-Lik: -17355.094, Max-Change: 0.00059Iteration: 380, Log-Lik: -17355.094, Max-Change: 0.00075Iteration: 381, Log-Lik: -17355.094, Max-Change: 0.00095Iteration: 382, Log-Lik: -17355.094, Max-Change: 0.00059Iteration: 383, Log-Lik: -17355.094, Max-Change: 0.00075Iteration: 384, Log-Lik: -17355.094, Max-Change: 0.00095Iteration: 385, Log-Lik: -17355.094, Max-Change: 0.00058Iteration: 386, Log-Lik: -17355.094, Max-Change: 0.00074Iteration: 387, Log-Lik: -17355.094, Max-Change: 0.00094Iteration: 388, Log-Lik: -17355.093, Max-Change: 0.00058Iteration: 389, Log-Lik: -17355.093, Max-Change: 0.00074Iteration: 390, Log-Lik: -17355.093, Max-Change: 0.00094Iteration: 391, Log-Lik: -17355.093, Max-Change: 0.00058Iteration: 392, Log-Lik: -17355.093, Max-Change: 0.00074Iteration: 393, Log-Lik: -17355.093, Max-Change: 0.00093Iteration: 394, Log-Lik: -17355.093, Max-Change: 0.00058Iteration: 395, Log-Lik: -17355.093, Max-Change: 0.00073Iteration: 396, Log-Lik: -17355.093, Max-Change: 0.00093Iteration: 397, Log-Lik: -17355.093, Max-Change: 0.00057Iteration: 398, Log-Lik: -17355.093, Max-Change: 0.00073Iteration: 399, Log-Lik: -17355.093, Max-Change: 0.00092Iteration: 400, Log-Lik: -17355.092, Max-Change: 0.00057Iteration: 401, Log-Lik: -17355.092, Max-Change: 0.00073Iteration: 402, Log-Lik: -17355.092, Max-Change: 0.00092Iteration: 403, Log-Lik: -17355.092, Max-Change: 0.00057Iteration: 404, Log-Lik: -17355.092, Max-Change: 0.00072Iteration: 405, Log-Lik: -17355.092, Max-Change: 0.00092Iteration: 406, Log-Lik: -17355.092, Max-Change: 0.00057Iteration: 407, Log-Lik: -17355.092, Max-Change: 0.00072Iteration: 408, Log-Lik: -17355.092, Max-Change: 0.00091Iteration: 409, Log-Lik: -17355.092, Max-Change: 0.00056Iteration: 410, Log-Lik: -17355.092, Max-Change: 0.00072Iteration: 411, Log-Lik: -17355.092, Max-Change: 0.00091Iteration: 412, Log-Lik: -17355.092, Max-Change: 0.00056Iteration: 413, Log-Lik: -17355.091, Max-Change: 0.00071Iteration: 414, Log-Lik: -17355.091, Max-Change: 0.00090Iteration: 415, Log-Lik: -17355.091, Max-Change: 0.00056Iteration: 416, Log-Lik: -17355.091, Max-Change: 0.00071Iteration: 417, Log-Lik: -17355.091, Max-Change: 0.00090Iteration: 418, Log-Lik: -17355.091, Max-Change: 0.00056Iteration: 419, Log-Lik: -17355.091, Max-Change: 0.00071Iteration: 420, Log-Lik: -17355.091, Max-Change: 0.00089Iteration: 421, Log-Lik: -17355.091, Max-Change: 0.00055Iteration: 422, Log-Lik: -17355.091, Max-Change: 0.00070Iteration: 423, Log-Lik: -17355.091, Max-Change: 0.00089Iteration: 424, Log-Lik: -17355.091, Max-Change: 0.00055Iteration: 425, Log-Lik: -17355.091, Max-Change: 0.00070Iteration: 426, Log-Lik: -17355.090, Max-Change: 0.00089Iteration: 427, Log-Lik: -17355.090, Max-Change: 0.00055Iteration: 428, Log-Lik: -17355.090, Max-Change: 0.00070Iteration: 429, Log-Lik: -17355.090, Max-Change: 0.00088Iteration: 430, Log-Lik: -17355.090, Max-Change: 0.00055Iteration: 431, Log-Lik: -17355.090, Max-Change: 0.00069Iteration: 432, Log-Lik: -17355.090, Max-Change: 0.00088Iteration: 433, Log-Lik: -17355.090, Max-Change: 0.00054Iteration: 434, Log-Lik: -17355.090, Max-Change: 0.00069Iteration: 435, Log-Lik: -17355.090, Max-Change: 0.00087Iteration: 436, Log-Lik: -17355.090, Max-Change: 0.00054Iteration: 437, Log-Lik: -17355.090, Max-Change: 0.00069Iteration: 438, Log-Lik: -17355.090, Max-Change: 0.00087Iteration: 439, Log-Lik: -17355.090, Max-Change: 0.00054Iteration: 440, Log-Lik: -17355.089, Max-Change: 0.00068Iteration: 441, Log-Lik: -17355.089, Max-Change: 0.00087Iteration: 442, Log-Lik: -17355.089, Max-Change: 0.00054Iteration: 443, Log-Lik: -17355.089, Max-Change: 0.00068Iteration: 444, Log-Lik: -17355.089, Max-Change: 0.00086Iteration: 445, Log-Lik: -17355.089, Max-Change: 0.00053Iteration: 446, Log-Lik: -17355.089, Max-Change: 0.00068Iteration: 447, Log-Lik: -17355.089, Max-Change: 0.00086Iteration: 448, Log-Lik: -17355.089, Max-Change: 0.00053Iteration: 449, Log-Lik: -17355.089, Max-Change: 0.00067Iteration: 450, Log-Lik: -17355.089, Max-Change: 0.00085Iteration: 451, Log-Lik: -17355.089, Max-Change: 0.00053Iteration: 452, Log-Lik: -17355.089, Max-Change: 0.00067Iteration: 453, Log-Lik: -17355.089, Max-Change: 0.00085Iteration: 454, Log-Lik: -17355.088, Max-Change: 0.00053Iteration: 455, Log-Lik: -17355.088, Max-Change: 0.00067Iteration: 456, Log-Lik: -17355.088, Max-Change: 0.00085Iteration: 457, Log-Lik: -17355.088, Max-Change: 0.00052Iteration: 458, Log-Lik: -17355.088, Max-Change: 0.00066Iteration: 459, Log-Lik: -17355.088, Max-Change: 0.00084Iteration: 460, Log-Lik: -17355.088, Max-Change: 0.00052Iteration: 461, Log-Lik: -17355.088, Max-Change: 0.00066Iteration: 462, Log-Lik: -17355.088, Max-Change: 0.00084Iteration: 463, Log-Lik: -17355.088, Max-Change: 0.00052Iteration: 464, Log-Lik: -17355.088, Max-Change: 0.00066Iteration: 465, Log-Lik: -17355.088, Max-Change: 0.00083Iteration: 466, Log-Lik: -17355.088, Max-Change: 0.00052Iteration: 467, Log-Lik: -17355.088, Max-Change: 0.00065Iteration: 468, Log-Lik: -17355.088, Max-Change: 0.00083Iteration: 469, Log-Lik: -17355.087, Max-Change: 0.00051Iteration: 470, Log-Lik: -17355.087, Max-Change: 0.00065Iteration: 471, Log-Lik: -17355.087, Max-Change: 0.00083Iteration: 472, Log-Lik: -17355.087, Max-Change: 0.00051Iteration: 473, Log-Lik: -17355.087, Max-Change: 0.00065Iteration: 474, Log-Lik: -17355.087, Max-Change: 0.00082Iteration: 475, Log-Lik: -17355.087, Max-Change: 0.00051Iteration: 476, Log-Lik: -17355.087, Max-Change: 0.00065Iteration: 477, Log-Lik: -17355.087, Max-Change: 0.00082Iteration: 478, Log-Lik: -17355.087, Max-Change: 0.00051Iteration: 479, Log-Lik: -17355.087, Max-Change: 0.00064Iteration: 480, Log-Lik: -17355.087, Max-Change: 0.00081Iteration: 481, Log-Lik: -17355.087, Max-Change: 0.00050Iteration: 482, Log-Lik: -17355.087, Max-Change: 0.00064Iteration: 483, Log-Lik: -17355.087, Max-Change: 0.00081Iteration: 484, Log-Lik: -17355.087, Max-Change: 0.00050Iteration: 485, Log-Lik: -17355.086, Max-Change: 0.00064Iteration: 486, Log-Lik: -17355.086, Max-Change: 0.00081Iteration: 487, Log-Lik: -17355.086, Max-Change: 0.00050Iteration: 488, Log-Lik: -17355.086, Max-Change: 0.00063Iteration: 489, Log-Lik: -17355.086, Max-Change: 0.00080Iteration: 490, Log-Lik: -17355.086, Max-Change: 0.00050Iteration: 491, Log-Lik: -17355.086, Max-Change: 0.00063Iteration: 492, Log-Lik: -17355.086, Max-Change: 0.00080Iteration: 493, Log-Lik: -17355.086, Max-Change: 0.00050Iteration: 494, Log-Lik: -17355.086, Max-Change: 0.00063Iteration: 495, Log-Lik: -17355.086, Max-Change: 0.00080Iteration: 496, Log-Lik: -17355.086, Max-Change: 0.00049Iteration: 497, Log-Lik: -17355.086, Max-Change: 0.00063Iteration: 498, Log-Lik: -17355.086, Max-Change: 0.00079Iteration: 499, Log-Lik: -17355.086, Max-Change: 0.00049Iteration: 500, Log-Lik: -17355.086, Max-Change: 0.00062
+\end{verbatim}
+
+\begin{verbatim}
+## EM cycles terminated after 500 iterations.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(IRTModel)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##        F1    h2
+## i1  0.665 0.442
+## i2  0.723 0.523
+## i3  0.718 0.516
+## i4  0.704 0.496
+## i5  0.407 0.166
+## i6  0.664 0.441
+## i7  0.478 0.228
+## i8  0.546 0.298
+## i9  0.752 0.566
+## i10 0.649 0.421
+## i11 0.840 0.705
+## i12 0.708 0.501
+## i13 0.658 0.434
+## i14 0.639 0.408
+## i15 0.496 0.246
+## i16 0.744 0.553
+## i17 0.887 0.786
+## i18 0.772 0.596
+## i19 0.704 0.496
+## i20 0.792 0.627
+## i21 0.498 0.248
+## i22 0.744 0.554
+## i23 0.766 0.587
+## i24 0.768 0.591
+## i25 0.709 0.503
+## i26 0.420 0.176
+## i27 0.515 0.265
+## i28 0.619 0.383
+## i29 0.617 0.381
+## i30 0.430 0.185
+## i31 0.689 0.474
+## i32 0.865 0.748
+## i33 0.739 0.546
+## i34 0.747 0.558
+## i35 0.600 0.360
+## i36 0.819 0.671
+## i37 0.819 0.671
+## i38 0.624 0.389
+## i39 0.770 0.593
+## i40 0.623 0.388
+## i41 0.754 0.568
+## i42 0.829 0.687
+## i43 0.594 0.352
+## i44 0.508 0.258
+## i45 0.538 0.289
+## 
+## SS loadings:  20.871 
+## Proportion Var:  0.464 
+## 
+## Factor correlations: 
+## 
+##    F1
+## F1  1
+\end{verbatim}
+
+Un buen item esta ordenado
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{coef}\NormalTok{(IRTModel , }\AttributeTok{IRTpars =}\NormalTok{ T)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## $i1
+##         a     b1    b2    b3
+## par 1.514 -0.811 1.452 1.614
+## 
+## $i2
+##         a    b1    b2    b3
+## par 1.782 0.181 1.754 1.854
+## 
+## $i3
+##         a    b1    b2    b3
+## par 1.758 0.292 1.579 1.695
+## 
+## $i4
+##         a     b1    b2    b3
+## par 1.687 -0.019 1.692 1.897
+## 
+## $i5
+##         a    b1    b2    b3
+## par 0.759 0.222 2.182 1.877
+## 
+## $i6
+##         a    b1    b2    b3
+## par 1.511 0.963 1.849 1.504
+## 
+## $i7
+##         a   b1    b2    b3
+## par 0.926 0.05 1.874 1.899
+## 
+## $i8
+##         a     b1    b2   b3
+## par 1.109 -0.068 1.841 1.77
+## 
+## $i9
+##         a   b1    b2    b3
+## par 1.943 1.34 1.659 1.845
+## 
+## $i10
+##         a    b1    b2    b3
+## par 1.451 0.823 2.071 2.161
+## 
+## $i11
+##         a    b1    b2    b3
+## par 2.631 0.708 1.392 1.388
+## 
+## $i12
+##         a    b1    b2    b3
+## par 1.705 0.033 1.502 1.355
+## 
+## $i13
+##         a     b1  b2    b3
+## par 1.489 -0.272 1.3 1.615
+## 
+## $i14
+##         a     b1    b2    b3
+## par 1.412 -0.551 1.505 1.813
+## 
+## $i15
+##         a     b1    b2    b3
+## par 0.972 -0.477 0.986 1.029
+## 
+## $i16
+##         a    b1   b2    b3
+## par 1.893 0.164 1.48 1.728
+## 
+## $i17
+##         a    b1    b2    b3
+## par 3.266 0.747 1.385 1.536
+## 
+## $i18
+##         a    b1    b2    b3
+## par 2.068 0.506 1.522 1.927
+## 
+## $i19
+##         a    b1    b2    b3
+## par 1.687 0.086 1.677 1.508
+## 
+## $i20
+##         a    b1    b2    b3
+## par 2.206 0.945 1.452 1.517
+## 
+## $i21
+##         a    b1    b2    b3
+## par 0.979 1.251 2.056 2.519
+## 
+## $i22
+##         a    b1    b2    b3
+## par 1.898 0.557 1.589 1.754
+## 
+## $i23
+##        a    b1  b2    b3
+## par 2.03 0.225 1.6 1.608
+## 
+## $i24
+##         a    b1    b2    b3
+## par 2.044 0.142 1.387 1.664
+## 
+## $i25
+##         a    b1    b2    b3
+## par 1.711 0.191 1.481 1.788
+## 
+## $i26
+##         a    b1    b2    b3
+## par 0.787 0.454 2.021 1.137
+## 
+## $i27
+##         a    b1    b2    b3
+## par 1.021 1.142 2.581 2.385
+## 
+## $i28
+##        a     b1    b2   b3
+## par 1.34 -0.267 1.698 1.46
+## 
+## $i29
+##         a    b1    b2    b3
+## par 1.336 0.212 1.624 1.892
+## 
+## $i30
+##         a     b1   b2   b3
+## par 0.811 -0.492 1.02 0.94
+## 
+## $i31
+##         a    b1    b2    b3
+## par 1.616 0.172 1.664 1.814
+## 
+## $i32
+##         a    b1    b2    b3
+## par 2.932 0.788 1.544 1.352
+## 
+## $i33
+##         a    b1    b2    b3
+## par 1.866 0.803 1.687 1.992
+## 
+## $i34
+##         a    b1    b2    b3
+## par 1.913 0.804 1.545 1.985
+## 
+## $i35
+##         a    b1    b2    b3
+## par 1.276 0.077 1.303 1.242
+## 
+## $i36
+##        a    b1    b2    b3
+## par 2.43 0.295 1.366 1.665
+## 
+## $i37
+##        a   b1    b2    b3
+## par 2.43 0.59 1.758 1.751
+## 
+## $i38
+##         a    b1    b2    b3
+## par 1.358 0.215 1.677 2.328
+## 
+## $i39
+##         a    b1    b2    b3
+## par 2.053 1.127 1.781 1.885
+## 
+## $i40
+##         a    b1   b2   b3
+## par 1.355 0.804 1.43 2.06
+## 
+## $i41
+##         a    b1    b2    b3
+## par 1.952 1.138 1.512 2.083
+## 
+## $i42
+##         a    b1    b2    b3
+## par 2.522 0.667 1.457 1.969
+## 
+## $i43
+##         a    b1    b2    b3
+## par 1.255 0.137 1.728 1.591
+## 
+## $i44
+##         a   b1    b2    b3
+## par 1.003 1.08 2.124 2.007
+## 
+## $i45
+##         a     b1    b2    b3
+## par 1.085 -0.542 0.775 1.086
+## 
+## $GroupPars
+##     MEAN_1 COV_11
+## par      0      1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel, }\DecValTok{3}\NormalTok{, }\AttributeTok{type =} \StringTok{"trace"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel, }\DecValTok{3}\NormalTok{, }\AttributeTok{type =} \StringTok{"info"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{coef}\NormalTok{(IRTModel , }\AttributeTok{IRTpars =}\NormalTok{ T)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## $i1
+##         a     b1    b2    b3
+## par 1.514 -0.811 1.452 1.614
+## 
+## $i2
+##         a    b1    b2    b3
+## par 1.782 0.181 1.754 1.854
+## 
+## $i3
+##         a    b1    b2    b3
+## par 1.758 0.292 1.579 1.695
+## 
+## $i4
+##         a     b1    b2    b3
+## par 1.687 -0.019 1.692 1.897
+## 
+## $i5
+##         a    b1    b2    b3
+## par 0.759 0.222 2.182 1.877
+## 
+## $i6
+##         a    b1    b2    b3
+## par 1.511 0.963 1.849 1.504
+## 
+## $i7
+##         a   b1    b2    b3
+## par 0.926 0.05 1.874 1.899
+## 
+## $i8
+##         a     b1    b2   b3
+## par 1.109 -0.068 1.841 1.77
+## 
+## $i9
+##         a   b1    b2    b3
+## par 1.943 1.34 1.659 1.845
+## 
+## $i10
+##         a    b1    b2    b3
+## par 1.451 0.823 2.071 2.161
+## 
+## $i11
+##         a    b1    b2    b3
+## par 2.631 0.708 1.392 1.388
+## 
+## $i12
+##         a    b1    b2    b3
+## par 1.705 0.033 1.502 1.355
+## 
+## $i13
+##         a     b1  b2    b3
+## par 1.489 -0.272 1.3 1.615
+## 
+## $i14
+##         a     b1    b2    b3
+## par 1.412 -0.551 1.505 1.813
+## 
+## $i15
+##         a     b1    b2    b3
+## par 0.972 -0.477 0.986 1.029
+## 
+## $i16
+##         a    b1   b2    b3
+## par 1.893 0.164 1.48 1.728
+## 
+## $i17
+##         a    b1    b2    b3
+## par 3.266 0.747 1.385 1.536
+## 
+## $i18
+##         a    b1    b2    b3
+## par 2.068 0.506 1.522 1.927
+## 
+## $i19
+##         a    b1    b2    b3
+## par 1.687 0.086 1.677 1.508
+## 
+## $i20
+##         a    b1    b2    b3
+## par 2.206 0.945 1.452 1.517
+## 
+## $i21
+##         a    b1    b2    b3
+## par 0.979 1.251 2.056 2.519
+## 
+## $i22
+##         a    b1    b2    b3
+## par 1.898 0.557 1.589 1.754
+## 
+## $i23
+##        a    b1  b2    b3
+## par 2.03 0.225 1.6 1.608
+## 
+## $i24
+##         a    b1    b2    b3
+## par 2.044 0.142 1.387 1.664
+## 
+## $i25
+##         a    b1    b2    b3
+## par 1.711 0.191 1.481 1.788
+## 
+## $i26
+##         a    b1    b2    b3
+## par 0.787 0.454 2.021 1.137
+## 
+## $i27
+##         a    b1    b2    b3
+## par 1.021 1.142 2.581 2.385
+## 
+## $i28
+##        a     b1    b2   b3
+## par 1.34 -0.267 1.698 1.46
+## 
+## $i29
+##         a    b1    b2    b3
+## par 1.336 0.212 1.624 1.892
+## 
+## $i30
+##         a     b1   b2   b3
+## par 0.811 -0.492 1.02 0.94
+## 
+## $i31
+##         a    b1    b2    b3
+## par 1.616 0.172 1.664 1.814
+## 
+## $i32
+##         a    b1    b2    b3
+## par 2.932 0.788 1.544 1.352
+## 
+## $i33
+##         a    b1    b2    b3
+## par 1.866 0.803 1.687 1.992
+## 
+## $i34
+##         a    b1    b2    b3
+## par 1.913 0.804 1.545 1.985
+## 
+## $i35
+##         a    b1    b2    b3
+## par 1.276 0.077 1.303 1.242
+## 
+## $i36
+##        a    b1    b2    b3
+## par 2.43 0.295 1.366 1.665
+## 
+## $i37
+##        a   b1    b2    b3
+## par 2.43 0.59 1.758 1.751
+## 
+## $i38
+##         a    b1    b2    b3
+## par 1.358 0.215 1.677 2.328
+## 
+## $i39
+##         a    b1    b2    b3
+## par 2.053 1.127 1.781 1.885
+## 
+## $i40
+##         a    b1   b2   b3
+## par 1.355 0.804 1.43 2.06
+## 
+## $i41
+##         a    b1    b2    b3
+## par 1.952 1.138 1.512 2.083
+## 
+## $i42
+##         a    b1    b2    b3
+## par 2.522 0.667 1.457 1.969
+## 
+## $i43
+##         a    b1    b2    b3
+## par 1.255 0.137 1.728 1.591
+## 
+## $i44
+##         a   b1    b2    b3
+## par 1.003 1.08 2.124 2.007
+## 
+## $i45
+##         a     b1    b2    b3
+## par 1.085 -0.542 0.775 1.086
+## 
+## $GroupPars
+##     MEAN_1 COV_11
+## par      0      1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(IRTModel,  }\AttributeTok{type =} \StringTok{"trace"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(IRTModel,  }\AttributeTok{type =} \StringTok{"info"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-4.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{1}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-5.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{2}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-6.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{3}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-7.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{4}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-8.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{5}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-9.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{6}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-10.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{7}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-11.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{8}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-12.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{9}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-13.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{10}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-14.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{11}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-15.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{12}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-16.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{13}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-17.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{14}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-18.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{15}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-19.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{16}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-20.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{17}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-21.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{18}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-22.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{19}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-23.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{20}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-24.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{21}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-25.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{22}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-26.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{23}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-27.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{24}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-28.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{25}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-29.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{26}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-30.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{27}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-31.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{28}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-32.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{29}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-33.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{30}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-34.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{31}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-35.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{32}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-36.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{33}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-37.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{34}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-38.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{35}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-39.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{36}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-40.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{37}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-41.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{38}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-42.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{39}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-43.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{40}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-44.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{41}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-45.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{42}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-46.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{43}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-47.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{44}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-48.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(IRTModel,}\DecValTok{45}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-6-49.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x1 }\OtherTok{\textless{}{-}}\FunctionTok{c}\NormalTok{(}\DecValTok{38}\NormalTok{, }\DecValTok{43}\NormalTok{, }\DecValTok{16}\NormalTok{, }\DecValTok{23}\NormalTok{, }\DecValTok{18}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{25}\NormalTok{, }\DecValTok{29}\NormalTok{, }\DecValTok{31}\NormalTok{, }\DecValTok{35}\NormalTok{, }\DecValTok{24}\NormalTok{, }\DecValTok{27}\NormalTok{, }\DecValTok{13}\NormalTok{, }\DecValTok{12}\NormalTok{)}\CommentTok{\#UCV}
+\NormalTok{x2 }\OtherTok{\textless{}{-}}\FunctionTok{c}\NormalTok{(}\DecValTok{38}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{23}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{43}\NormalTok{, }\DecValTok{25}\NormalTok{)}\CommentTok{\#DATA}
+
+\NormalTok{x3 }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{11}\NormalTok{, }\DecValTok{32}\NormalTok{, }\DecValTok{17}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{36}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{18}\NormalTok{, }\DecValTok{22}\NormalTok{, }\DecValTok{42}\NormalTok{, }\DecValTok{24}\NormalTok{, }\DecValTok{33}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{41}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{31}\NormalTok{, }\DecValTok{16}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{19}\NormalTok{, }\DecValTok{28}\NormalTok{, }\DecValTok{13}\NormalTok{) }\CommentTok{\#DATA}
+\NormalTok{x4 }\OtherTok{\textless{}{-}}\FunctionTok{c}\NormalTok{(}\DecValTok{32}\NormalTok{, }\DecValTok{17}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{36}\NormalTok{, }\DecValTok{33}\NormalTok{, }\DecValTok{11}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{28}\NormalTok{)}\CommentTok{\#UCV}
+\NormalTok{x5 }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{11}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{33}\NormalTok{, }\DecValTok{16}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{36}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{24}\NormalTok{)}\CommentTok{\#UPC}
+
+\NormalTok{x6 }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{30}\NormalTok{, }\DecValTok{45}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{13}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{22}\NormalTok{)}\CommentTok{\#UPC}
+\NormalTok{x7 }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{30}\NormalTok{, }\DecValTok{45}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{35}\NormalTok{, }\DecValTok{40}\NormalTok{)}\CommentTok{\#DATA}
+\NormalTok{x8 }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{30}\NormalTok{, }\DecValTok{45}\NormalTok{, }\DecValTok{15}\NormalTok{)}\CommentTok{\#UCV}
+
+\NormalTok{f1 }\OtherTok{\textless{}{-}} \FunctionTok{intersect}\NormalTok{(x1, x2) }
+\FunctionTok{print}\NormalTok{(f1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 38 43 23 14 25
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{f2 }\OtherTok{\textless{}{-}} \FunctionTok{Reduce}\NormalTok{(intersect, }\FunctionTok{list}\NormalTok{(x3, x4, x5)) }
+\FunctionTok{print}\NormalTok{(f2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 11  3 36 33  1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{f3 }\OtherTok{\textless{}{-}} \FunctionTok{Reduce}\NormalTok{(intersect, }\FunctionTok{list}\NormalTok{(x6, x7, x8)) }
+\FunctionTok{print}\NormalTok{(f3)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 30 45 15
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{modelo\_afc}\OtherTok{\textless{}{-}} \StringTok{"}
+\StringTok{f1  =\textasciitilde{} i38+i43+i23+i14+i25}
+\StringTok{f2  =\textasciitilde{} i11+i3+i36+i33+i1}
+\StringTok{f3  =\textasciitilde{} i30+i45+i15}
+\StringTok{"}
+\CommentTok{\#Acemos el análisis factorial conformatorio}
+
+\NormalTok{afc2}\OtherTok{\textless{}{-}}\FunctionTok{cfa}\NormalTok{(modelo\_afc, }\AttributeTok{estimator =} \StringTok{\textquotesingle{}WLSMV\textquotesingle{}}\NormalTok{, }\AttributeTok{data =}\NormalTok{ items)}
+
+\CommentTok{\#Pedimos los resultados}
+\FunctionTok{summary}\NormalTok{(afc2, }\AttributeTok{fit.measures =}\NormalTok{ T, }\AttributeTok{standardized =}\NormalTok{ T)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## lavaan 0.6-12 ended normally after 36 iterations
+## 
+##   Estimator                                       DWLS
+##   Optimization method                           NLMINB
+##   Number of model parameters                        29
+## 
+##   Number of observations                           494
+## 
+## Model Test User Model:
+##                                               Standard      Robust
+##   Test Statistic                                61.270     160.333
+##   Degrees of freedom                                62          62
+##   P-value (Chi-square)                           0.502       0.000
+##   Scaling correction factor                                  0.425
+##   Shift parameter                                           16.321
+##     simple second-order correction                                
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                              4546.573    1412.336
+##   Degrees of freedom                                78          78
+##   P-value                                        0.000       0.000
+##   Scaling correction factor                                  3.349
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    1.000       0.926
+##   Tucker-Lewis Index (TLI)                       1.000       0.907
+##                                                                   
+##   Robust Comparative Fit Index (CFI)                            NA
+##   Robust Tucker-Lewis Index (TLI)                               NA
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          0.000       0.057
+##   90 Percent confidence interval - lower         0.000       0.046
+##   90 Percent confidence interval - upper         0.027       0.068
+##   P-value RMSEA <= 0.05                          1.000       0.146
+##                                                                   
+##   Robust RMSEA                                                  NA
+##   90 Percent confidence interval - lower                        NA
+##   90 Percent confidence interval - upper                        NA
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.045       0.045
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                           Robust.sem
+##   Information                                 Expected
+##   Information saturated (h1) model        Unstructured
+## 
+## Latent Variables:
+##                    Estimate  Std.Err  z-value  P(>|z|)   Std.lv  Std.all
+##   f1 =~                                                                 
+##     i38               1.000                               0.471    0.637
+##     i43               1.154    0.091   12.733    0.000    0.544    0.663
+##     i23               1.184    0.088   13.449    0.000    0.558    0.730
+##     i14               1.152    0.106   10.901    0.000    0.543    0.695
+##     i25               1.191    0.107   11.091    0.000    0.561    0.710
+##   f2 =~                                                                 
+##     i11               1.000                               0.579    0.720
+##     i3                0.960    0.078   12.328    0.000    0.556    0.715
+##     i36               1.086    0.077   14.108    0.000    0.628    0.799
+##     i33               0.739    0.059   12.499    0.000    0.428    0.631
+##     i1                0.920    0.088   10.420    0.000    0.532    0.684
+##   f3 =~                                                                 
+##     i30               1.000                               0.736    0.713
+##     i45               1.118    0.068   16.502    0.000    0.822    0.809
+##     i15               1.062    0.075   14.095    0.000    0.781    0.770
+## 
+## Covariances:
+##                    Estimate  Std.Err  z-value  P(>|z|)   Std.lv  Std.all
+##   f1 ~~                                                                 
+##     f2                0.217    0.029    7.358    0.000    0.795    0.795
+##     f3                0.256    0.029    8.882    0.000    0.739    0.739
+##   f2 ~~                                                                 
+##     f3                0.249    0.029    8.484    0.000    0.584    0.584
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(>|z|)   Std.lv  Std.all
+##    .i38               0.325    0.026   12.464    0.000    0.325    0.594
+##    .i43               0.377    0.040    9.543    0.000    0.377    0.560
+##    .i23               0.273    0.030    9.248    0.000    0.273    0.467
+##    .i14               0.315    0.028   11.102    0.000    0.315    0.517
+##    .i25               0.310    0.033    9.337    0.000    0.310    0.496
+##    .i11               0.312    0.035    8.902    0.000    0.312    0.482
+##    .i3                0.296    0.035    8.547    0.000    0.296    0.489
+##    .i36               0.223    0.029    7.657    0.000    0.223    0.361
+##    .i33               0.277    0.032    8.632    0.000    0.277    0.602
+##    .i1                0.322    0.033    9.901    0.000    0.322    0.532
+##    .i30               0.524    0.052   10.057    0.000    0.524    0.492
+##    .i45               0.357    0.046    7.749    0.000    0.357    0.346
+##    .i15               0.419    0.050    8.419    0.000    0.419    0.407
+##     f1                0.222    0.034    6.563    0.000    1.000    1.000
+##     f2                0.335    0.052    6.481    0.000    1.000    1.000
+##     f3                0.541    0.060    8.978    0.000    1.000    1.000
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(}\StringTok{"effectsize"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'effectsize'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:psych':
+## 
+##     phi
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#interpret(afc2)}
+
+\FunctionTok{reliability}\NormalTok{(afc2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##               f1        f2        f3
+## alpha  0.8195504 0.8411401 0.8070071
+## omega  0.8175581 0.8383691 0.8079496
+## omega2 0.8175581 0.8383691 0.8079496
+## omega3 0.8123431 0.8264276 0.8080817
+## avevar 0.4735789 0.5128874 0.5842344
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#PLOT}
+\FunctionTok{semPaths}\NormalTok{(afc2,  }\StringTok{"std"}\NormalTok{,   }\AttributeTok{edge.label.bg=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{sizeMan =} \DecValTok{3}\NormalTok{, }\AttributeTok{sizeInt =} \DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-7-1.pdf}
+
+Aplicación de teoría de respuesta al item
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{f1\_data }\OtherTok{\textless{}{-}}\NormalTok{ items[,}\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}i38\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}i43\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}i23\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}i14\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}i25\textquotesingle{}}\NormalTok{)]}
+\NormalTok{f2\_data }\OtherTok{\textless{}{-}}\NormalTok{ items[,}\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}i11\textquotesingle{}}\NormalTok{,  }\StringTok{\textquotesingle{}i3\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}i36\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}i33\textquotesingle{}}\NormalTok{,  }\StringTok{\textquotesingle{}i1\textquotesingle{}}\NormalTok{)]}
+\NormalTok{f3\_data }\OtherTok{\textless{}{-}}\NormalTok{ items[,}\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}i30\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}i45\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}i15\textquotesingle{}}\NormalTok{)]}
+
+
+\NormalTok{f1\_modelo }\OtherTok{\textless{}{-}} \FunctionTok{mirt}\NormalTok{(f1\_data, }\AttributeTok{model =} \DecValTok{1}\NormalTok{, }\AttributeTok{itemtype =} \StringTok{"gpcm"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Iteration: 1, Log-Lik: -2390.885, Max-Change: 2.36580Iteration: 2, Log-Lik: -2247.967, Max-Change: 1.31478Iteration: 3, Log-Lik: -2235.646, Max-Change: 0.40532Iteration: 4, Log-Lik: -2232.906, Max-Change: 0.22678Iteration: 5, Log-Lik: -2231.841, Max-Change: 0.09511Iteration: 6, Log-Lik: -2231.329, Max-Change: 0.07286Iteration: 7, Log-Lik: -2230.918, Max-Change: 0.02176Iteration: 8, Log-Lik: -2230.805, Max-Change: 0.01521Iteration: 9, Log-Lik: -2230.733, Max-Change: 0.01826Iteration: 10, Log-Lik: -2230.649, Max-Change: 0.01145Iteration: 11, Log-Lik: -2230.625, Max-Change: 0.01412Iteration: 12, Log-Lik: -2230.610, Max-Change: 0.00529Iteration: 13, Log-Lik: -2230.597, Max-Change: 0.00749Iteration: 14, Log-Lik: -2230.590, Max-Change: 0.00673Iteration: 15, Log-Lik: -2230.584, Max-Change: 0.00591Iteration: 16, Log-Lik: -2230.570, Max-Change: 0.00147Iteration: 17, Log-Lik: -2230.569, Max-Change: 0.00086Iteration: 18, Log-Lik: -2230.569, Max-Change: 0.00030Iteration: 19, Log-Lik: -2230.569, Max-Change: 0.00021Iteration: 20, Log-Lik: -2230.569, Max-Change: 0.00010Iteration: 21, Log-Lik: -2230.569, Max-Change: 0.00010
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(f1\_modelo)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##        F1    h2
+## i38 0.801 0.641
+## i43 0.737 0.543
+## i23 0.752 0.565
+## i14 0.624 0.389
+## i25 0.703 0.494
+## 
+## SS loadings:  2.633 
+## Proportion Var:  0.527 
+## 
+## Factor correlations: 
+## 
+##    F1
+## F1  1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{f2\_modelo }\OtherTok{\textless{}{-}} \FunctionTok{mirt}\NormalTok{(f2\_data, }\AttributeTok{model =} \DecValTok{1}\NormalTok{, }\AttributeTok{itemtype =} \StringTok{"gpcm"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Iteration: 1, Log-Lik: -2289.128, Max-Change: 2.84679Iteration: 2, Log-Lik: -2030.108, Max-Change: 2.01167Iteration: 3, Log-Lik: -2012.576, Max-Change: 0.95963Iteration: 4, Log-Lik: -2008.254, Max-Change: 0.47966Iteration: 5, Log-Lik: -2006.575, Max-Change: 0.22398Iteration: 6, Log-Lik: -2005.659, Max-Change: 0.09696Iteration: 7, Log-Lik: -2005.323, Max-Change: 0.07312Iteration: 8, Log-Lik: -2004.904, Max-Change: 0.04049Iteration: 9, Log-Lik: -2004.624, Max-Change: 0.02940Iteration: 10, Log-Lik: -2004.325, Max-Change: 0.01813Iteration: 11, Log-Lik: -2004.209, Max-Change: 0.01879Iteration: 12, Log-Lik: -2004.122, Max-Change: 0.01806Iteration: 13, Log-Lik: -2003.866, Max-Change: 0.01210Iteration: 14, Log-Lik: -2003.859, Max-Change: 0.00935Iteration: 15, Log-Lik: -2003.855, Max-Change: 0.00509Iteration: 16, Log-Lik: -2003.853, Max-Change: 0.00420Iteration: 17, Log-Lik: -2003.851, Max-Change: 0.00197Iteration: 18, Log-Lik: -2003.849, Max-Change: 0.00816Iteration: 19, Log-Lik: -2003.848, Max-Change: 0.00239Iteration: 20, Log-Lik: -2003.847, Max-Change: 0.00189Iteration: 21, Log-Lik: -2003.846, Max-Change: 0.00140Iteration: 22, Log-Lik: -2003.845, Max-Change: 0.00905Iteration: 23, Log-Lik: -2003.844, Max-Change: 0.00117Iteration: 24, Log-Lik: -2003.844, Max-Change: 0.00066Iteration: 25, Log-Lik: -2003.844, Max-Change: 0.00066Iteration: 26, Log-Lik: -2003.843, Max-Change: 0.00070Iteration: 27, Log-Lik: -2003.843, Max-Change: 0.00067Iteration: 28, Log-Lik: -2003.843, Max-Change: 0.00043Iteration: 29, Log-Lik: -2003.843, Max-Change: 0.00028Iteration: 30, Log-Lik: -2003.843, Max-Change: 0.00025Iteration: 31, Log-Lik: -2003.843, Max-Change: 0.00021Iteration: 32, Log-Lik: -2003.843, Max-Change: 0.00017Iteration: 33, Log-Lik: -2003.843, Max-Change: 0.00013Iteration: 34, Log-Lik: -2003.843, Max-Change: 0.00015Iteration: 35, Log-Lik: -2003.843, Max-Change: 0.00013Iteration: 36, Log-Lik: -2003.843, Max-Change: 0.00053Iteration: 37, Log-Lik: -2003.843, Max-Change: 0.00064Iteration: 38, Log-Lik: -2003.843, Max-Change: 0.00047Iteration: 39, Log-Lik: -2003.843, Max-Change: 0.00033Iteration: 40, Log-Lik: -2003.843, Max-Change: 0.00052Iteration: 41, Log-Lik: -2003.843, Max-Change: 0.00044Iteration: 42, Log-Lik: -2003.843, Max-Change: 0.00030Iteration: 43, Log-Lik: -2003.843, Max-Change: 0.00048Iteration: 44, Log-Lik: -2003.843, Max-Change: 0.00040Iteration: 45, Log-Lik: -2003.843, Max-Change: 0.00027Iteration: 46, Log-Lik: -2003.843, Max-Change: 0.00048Iteration: 47, Log-Lik: -2003.843, Max-Change: 0.00035Iteration: 48, Log-Lik: -2003.843, Max-Change: 0.00024Iteration: 49, Log-Lik: -2003.843, Max-Change: 0.00048Iteration: 50, Log-Lik: -2003.843, Max-Change: 0.00026Iteration: 51, Log-Lik: -2003.843, Max-Change: 0.00018Iteration: 52, Log-Lik: -2003.843, Max-Change: 0.00536Iteration: 53, Log-Lik: -2003.843, Max-Change: 0.00014Iteration: 54, Log-Lik: -2003.843, Max-Change: 0.00046Iteration: 55, Log-Lik: -2003.842, Max-Change: 0.00010Iteration: 56, Log-Lik: -2003.842, Max-Change: 0.00010
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(f2\_modelo)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##        F1    h2
+## i11 0.861 0.741
+## i3  0.817 0.667
+## i36 0.790 0.624
+## i33 0.676 0.457
+## i1  0.610 0.372
+## 
+## SS loadings:  2.862 
+## Proportion Var:  0.572 
+## 
+## Factor correlations: 
+## 
+##    F1
+## F1  1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{f3\_modelo }\OtherTok{\textless{}{-}} \FunctionTok{mirt}\NormalTok{(f3\_data, }\AttributeTok{model =} \DecValTok{1}\NormalTok{, }\AttributeTok{itemtype =} \StringTok{"gpcm"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Iteration: 1, Log-Lik: -1809.807, Max-Change: 0.52758Iteration: 2, Log-Lik: -1746.841, Max-Change: 0.36695Iteration: 3, Log-Lik: -1734.210, Max-Change: 0.26297Iteration: 4, Log-Lik: -1729.260, Max-Change: 0.17266Iteration: 5, Log-Lik: -1727.229, Max-Change: 0.12834Iteration: 6, Log-Lik: -1726.303, Max-Change: 0.09026Iteration: 7, Log-Lik: -1725.615, Max-Change: 0.04095Iteration: 8, Log-Lik: -1725.548, Max-Change: 0.03033Iteration: 9, Log-Lik: -1725.513, Max-Change: 0.02331Iteration: 10, Log-Lik: -1725.475, Max-Change: 0.00778Iteration: 11, Log-Lik: -1725.472, Max-Change: 0.00760Iteration: 12, Log-Lik: -1725.470, Max-Change: 0.00529Iteration: 13, Log-Lik: -1725.468, Max-Change: 0.00427Iteration: 14, Log-Lik: -1725.467, Max-Change: 0.00246Iteration: 15, Log-Lik: -1725.466, Max-Change: 0.00224Iteration: 16, Log-Lik: -1725.465, Max-Change: 0.00202Iteration: 17, Log-Lik: -1725.465, Max-Change: 0.00022Iteration: 18, Log-Lik: -1725.465, Max-Change: 0.00112Iteration: 19, Log-Lik: -1725.465, Max-Change: 0.00019Iteration: 20, Log-Lik: -1725.465, Max-Change: 0.00094Iteration: 21, Log-Lik: -1725.465, Max-Change: 0.00019Iteration: 22, Log-Lik: -1725.465, Max-Change: 0.00018Iteration: 23, Log-Lik: -1725.465, Max-Change: 0.00054Iteration: 24, Log-Lik: -1725.465, Max-Change: 0.00015Iteration: 25, Log-Lik: -1725.465, Max-Change: 0.00010Iteration: 26, Log-Lik: -1725.465, Max-Change: 0.00039Iteration: 27, Log-Lik: -1725.465, Max-Change: 0.00024Iteration: 28, Log-Lik: -1725.465, Max-Change: 0.00011Iteration: 29, Log-Lik: -1725.465, Max-Change: 0.00038Iteration: 30, Log-Lik: -1725.465, Max-Change: 0.00030Iteration: 31, Log-Lik: -1725.465, Max-Change: 0.00010
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(f3\_modelo)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##        F1    h2
+## i30 0.768 0.589
+## i45 0.833 0.694
+## i15 0.606 0.367
+## 
+## SS loadings:  1.65 
+## Proportion Var:  0.55 
+## 
+## Factor correlations: 
+## 
+##    F1
+## F1  1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{coef}\NormalTok{(f1\_modelo , }\AttributeTok{IRTpars =}\NormalTok{ T)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## $i38
+##         a    b1    b2    b3
+## par 2.274 0.108 1.446 2.203
+## 
+## $i43
+##         a    b1    b2    b3
+## par 1.856 0.042 1.485 1.673
+## 
+## $i23
+##        a    b1    b2   b3
+## par 1.94 0.191 1.677 1.78
+## 
+## $i14
+##         a     b1   b2    b3
+## par 1.359 -0.609 1.55 1.947
+## 
+## $i25
+##         a    b1    b2   b3
+## par 1.682 0.151 1.528 1.94
+## 
+## $GroupPars
+##     MEAN_1 COV_11
+## par      0      1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(f1\_modelo,  }\AttributeTok{type =} \StringTok{"trace"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(f1\_modelo,  }\AttributeTok{type =} \StringTok{"info"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(f1\_modelo,}\DecValTok{1}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(f1\_modelo,}\DecValTok{2}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-4.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(f1\_modelo,}\DecValTok{3}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-5.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(f1\_modelo,}\DecValTok{4}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-6.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(f1\_modelo,}\DecValTok{5}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-7.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{coef}\NormalTok{(f2\_modelo , }\AttributeTok{IRTpars =}\NormalTok{ T)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## $i11
+##         a    b1    b2    b3
+## par 2.882 0.636 1.459 1.629
+## 
+## $i3
+##         a    b1    b2    b3
+## par 2.409 0.174 1.494 1.883
+## 
+## $i36
+##         a   b1    b2   b3
+## par 2.194 0.24 1.472 1.92
+## 
+## $i33
+##         a   b1    b2    b3
+## par 1.562 0.85 1.908 2.304
+## 
+## $i1
+##        a     b1    b2    b3
+## par 1.31 -0.921 1.572 1.821
+## 
+## $GroupPars
+##     MEAN_1 COV_11
+## par      0      1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(f2\_modelo,  }\AttributeTok{type =} \StringTok{"trace"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-8.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(f2\_modelo,  }\AttributeTok{type =} \StringTok{"info"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-9.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(f2\_modelo,}\DecValTok{1}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-10.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(f2\_modelo,}\DecValTok{2}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-11.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(f2\_modelo,}\DecValTok{3}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-12.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(f2\_modelo,}\DecValTok{4}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-13.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(f2\_modelo,}\DecValTok{5}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-14.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{coef}\NormalTok{(f3\_modelo , }\AttributeTok{IRTpars =}\NormalTok{ T)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## $i30
+##         a     b1   b2    b3
+## par 2.039 -0.531 0.58 1.038
+## 
+## $i45
+##        a     b1    b2    b3
+## par 2.56 -0.567 0.487 1.109
+## 
+## $i15
+##         a     b1    b2    b3
+## par 1.297 -0.523 0.781 1.096
+## 
+## $GroupPars
+##     MEAN_1 COV_11
+## par      0      1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(f3\_modelo,  }\AttributeTok{type =} \StringTok{"trace"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-15.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(f3\_modelo,  }\AttributeTok{type =} \StringTok{"info"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-16.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(f3\_modelo,}\DecValTok{1}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-17.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(f3\_modelo,}\DecValTok{2}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-18.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{itemplot}\NormalTok{(f3\_modelo,}\DecValTok{3}\NormalTok{, }\AttributeTok{type =} \StringTok{\textquotesingle{}trace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analisis_files/figure-latex/unnamed-chunk-8-19.pdf}
+
+\end{document}
